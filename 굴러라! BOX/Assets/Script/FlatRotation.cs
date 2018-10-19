@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FlatRotation : MonoBehaviour
+{
+
+	// Use this for initialization
+	void Start ()
+    {
+        InvokeRepeating("FlatRotate", 0, 0.75f);
+    }
+	
+	// Update is called once per frame
+	void Update ()
+    {
+
+    }
+
+    void FlatRotate()
+    {
+        this.transform.Rotate(new Vector3(0, 0, 90));//회전
+    }
+}
