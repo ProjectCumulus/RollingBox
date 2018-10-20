@@ -6,8 +6,8 @@ public class FlatUDMove : MonoBehaviour
 {
     float y;
     Rigidbody2D rb;
-    int UDD = 2;//속도
-    int Range = 5;//범위
+    public int UDD = 2;//속도
+    public int Range = 5;//범위
 
 
     // Use this for initialization
@@ -20,7 +20,7 @@ public class FlatUDMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = (new Vector2(UDD, 0));
+        rb.velocity = (new Vector2(0, UDD));
 
         if (this.transform.position.y - y < -Range)
         {

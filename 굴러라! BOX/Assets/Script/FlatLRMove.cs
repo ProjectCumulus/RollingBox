@@ -6,8 +6,9 @@ public class FlatLRMove : MonoBehaviour
 {
     float x;
     Rigidbody2D rb;
-    int RLD = 2;//속도
-    int Range = 5;//범위
+    int RLD = 1;
+    public float speed = 1;
+    public int Range = 5;//범위
 
     // Use this for initialization
     void Start ()
@@ -19,16 +20,16 @@ public class FlatLRMove : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        rb.velocity = (new Vector2(RLD, 0));
+        rb.velocity = (new Vector2(speed*RLD, 0));
 
         if (this.transform.position.x - x<-5)
         {
-            RLD = 2;
+            RLD = 1;
         }
 
         if (this.transform.position.x-x >5)
         {
-            RLD = -2;
+            RLD = -1;
         }
     }
 }

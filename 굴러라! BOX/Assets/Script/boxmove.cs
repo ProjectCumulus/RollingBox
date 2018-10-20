@@ -63,6 +63,7 @@ public class boxmove : MonoBehaviour
     void BoxMove()
     {
         transform.position += new Vector3(RightLeftDistinction * MoveSpeed , 0, 0);//이동
+        //transform.position += new Vector3(-RightLeftDistinction *0.00001f *BoxRotation*(-30*BoxRotation+1)*1.059378145028868f, 0, 0);
         this.transform.Rotate(new Vector3(0, 0, RightLeftDistinction * -RotateAngle));//회전
         BoxRotation++;
         if(BoxRotation>50)
