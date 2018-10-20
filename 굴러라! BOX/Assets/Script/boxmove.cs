@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class boxmove : MonoBehaviour
 {
-    public int HP = 100;
     float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
     public float JumpPower = 30;
