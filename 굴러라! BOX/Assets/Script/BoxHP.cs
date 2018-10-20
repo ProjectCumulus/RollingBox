@@ -5,40 +5,54 @@ using UnityEngine;
  
 public class BoxHP : MonoBehaviour 
 { 
-      public int HP = 100; 
-  	// Use this for initialization 
-  	void Start()
+    public int HP = 100;
+    //Restart restart;
+    // Use this for initialization 
+
+    private void Awake()
+    {
+        /*
+        restart = null;
+        restart = GameObject.Find("RestartManager").GetComponent<Restart>();
+        */
+
+    }
+
+    void Start()
       { 
           InvokeRepeating("Rain", 0, 0.2f); 
+      }
+
+    // Update is called once per frame 
+    void Update()
+    {
+        if (HP <= 0)
+        { 
+            HP = 0;
+            Death();
+        }
+        if (HP >= 100)
+            HP = 100; 
       } 
-  	 
- 	// Update is called once per frame 
-  	void Update()
+  
+    void Rain()
       { 
-          if (HP <= 0) 
-              HP = 0; 
-         if (HP >= 100) 
-              HP = 100; 
-  
- 
-      } 
-  
- 
-      void Rain()
-     { 
           HP--; 
       } 
- 
- 
-      void Fire()
+  
+    void Fire()
       { 
           HP++; 
- 
- 
       } 
-  
- 
-      private void OnTriggerEnter2D(Collider2D collision)
+
+    void Death()
+    {
+        gameObject.SetActive(false);
+        Debug.Log("파괴됨.");
+        //restart.SceneRestart();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
       { 
          if (collision.gameObject.tag == "Fire") 
           { 
@@ -53,7 +67,6 @@ public class BoxHP : MonoBehaviour
          } 
       } 
   
- 
       private void OnTriggerExit2D(Collider2D collision)
       { 
           if (collision.gameObject.tag == "Fire") 
@@ -61,7 +74,6 @@ public class BoxHP : MonoBehaviour
               CancelInvoke("Fire"); 
               InvokeRepeating("Rain", 0, 0.2f); 
           } 
- 
  
           if (collision.gameObject.tag == "Umb") 
           { 

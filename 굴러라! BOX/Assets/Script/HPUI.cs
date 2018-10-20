@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,4 +20,4 @@ public class HPUI : MonoBehaviour
         hp = boxHP.HP;
         FA.fillAmount = hp/100f;
 	}
-}*/
+}

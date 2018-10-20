@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class boxmove : MonoBehaviour
 {
+    public int StartPoint = 0;//스폰위치 판별 
     float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
-    public float JumpPower = 30;
+    float JumpPower = 15;
     int KeyInputCheck = 0;
     int RightLeftDistinction = 0;//좌우판별
     int BoxRotation = 1;//박스의 회전상태를 나타냄, 1일때 정지
@@ -14,8 +15,26 @@ public class boxmove : MonoBehaviour
 
     Rigidbody2D rb;
 
+    private void Awake()
+    {
+        if(StartPoint == 0)
+        {
+            transform.position = new Vector3(-13, -2, 0);
+        }
+
+        if (StartPoint == 1)
+        {
+            transform.position = new Vector3(0, -2, 0);
+        }
+
+        if (StartPoint == 2)
+        {
+            transform.position = new Vector3(13, -2, 0);
+        }
+    }
+
     // Use this for initialization
-    void Start ()
+    private void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -23,7 +42,7 @@ public class boxmove : MonoBehaviour
 
 
 // Update is called once per frame
-    void Update ()
+    private void Update ()
     {
 
         if (BoxOnGround==true&&Input.GetKey(KeyCode.W))
@@ -62,13 +81,12 @@ public class boxmove : MonoBehaviour
     void BoxMove()
     {
         transform.position += new Vector3(RightLeftDistinction * MoveSpeed , 0, 0);//이동
-        //transform.position += new Vector3(-RightLeftDistinction *0.00001f *BoxRotation*(-30*BoxRotation+1)*1.059378145028868f, 0, 0);
         this.transform.Rotate(new Vector3(0, 0, RightLeftDistinction * -RotateAngle));//회전
         BoxRotation++;
         if(BoxRotation>50)
         {
             rb.freezeRotation = false;
-            CancelInvoke();
+            CancelInvoke("BoxMove");
             BoxRotation = 1;
         }
     }

@@ -241,6 +241,7 @@
     <Compile Include="Assets\Script\FlatUDMove.cs" />
     <Compile Include="Assets\Script\HPUI.cs" />
     <Compile Include="Assets\Script\Rain.cs" />
+    <Compile Include="Assets\Script\Restart.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
