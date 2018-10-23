@@ -5,7 +5,7 @@ using UnityEngine;
 public class boxmove : MonoBehaviour
 {
     public int StartPoint = 0;//스폰위치 판별 
-    public float MoveSpeed = 0.02f;
+    float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
     float JumpPower = 15;
     int KeyInputCheck = 0;

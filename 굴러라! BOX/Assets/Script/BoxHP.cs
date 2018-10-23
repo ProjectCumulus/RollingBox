@@ -6,6 +6,7 @@ using UnityEngine;
 public class BoxHP : MonoBehaviour 
 { 
     public int HP = 100;
+    public int Heal = 30;
     //Restart restart;
     // Use this for initialization 
 
@@ -55,17 +56,27 @@ public class BoxHP : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
       { 
          if (collision.gameObject.tag == "Fire") 
-          { 
+         { 
               CancelInvoke("Rain"); 
               InvokeRepeating("Fire", 0, 0.05f); 
-          } 
-  
+         }  
  
-          if (collision.gameObject.tag == "Umb") 
-          { 
+         if (collision.gameObject.tag == "Umb") 
+         { 
               CancelInvoke("Rain"); 
-         } 
-      } 
+         }
+
+        if (collision.gameObject.tag == "Heal")
+        {
+            HP = HP + Heal;
+        }
+
+        if (collision.gameObject.tag == "WaterTrap")
+        {
+            HP = HP - 30;
+            
+        }
+    } 
   
       private void OnTriggerExit2D(Collider2D collision)
       { 
@@ -73,11 +84,11 @@ public class BoxHP : MonoBehaviour
           { 
               CancelInvoke("Fire"); 
               InvokeRepeating("Rain", 0, 0.2f); 
-          } 
- 
-          if (collision.gameObject.tag == "Umb") 
-          { 
-             InvokeRepeating("Rain", 0, 0.2f); 
-          } 
-      } 
+          }
+
+        if (collision.gameObject.tag == "Umb")
+        {
+            InvokeRepeating("Rain", 0, 0.2f);
+        }
+    } 
   } 
