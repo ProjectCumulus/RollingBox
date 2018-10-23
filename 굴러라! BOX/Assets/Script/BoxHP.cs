@@ -7,6 +7,7 @@ public class BoxHP : MonoBehaviour
 { 
     public int HP = 100;
     public int Heal = 30;
+    int RainD = 1;
     //Restart restart;
     // Use this for initialization 
 
@@ -38,7 +39,7 @@ public class BoxHP : MonoBehaviour
   
     void Rain()
       { 
-          HP--; 
+          HP-=RainD; 
       } 
   
     void Fire()
@@ -62,8 +63,8 @@ public class BoxHP : MonoBehaviour
          }  
  
          if (collision.gameObject.tag == "Umb") 
-         { 
-              CancelInvoke("Rain"); 
+         {
+            RainD = 0;
          }
 
         if (collision.gameObject.tag == "Heal")
@@ -76,9 +77,14 @@ public class BoxHP : MonoBehaviour
             HP = HP - 30;
             
         }
-    } 
-  
-      private void OnTriggerExit2D(Collider2D collision)
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        RainD = 0;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
       { 
           if (collision.gameObject.tag == "Fire") 
           { 
@@ -88,7 +94,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Umb")
         {
-            InvokeRepeating("Rain", 0, 0.2f);
+            RainD = 1;
         }
     } 
   } 
