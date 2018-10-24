@@ -1,14 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
+    string Stage = "Stage";
 
-	// Use this for initialization
-	void Start ()
+
+    private void Awake()
+    {
+        if (SceneManager.GetActiveScene().name == "ScriptLab")
+        {
+            Stage = "ScriptLab";
+        }
+
+        if (SceneManager.GetActiveScene().name == "Stage1")
+        {
+            Stage = Stage + "1";
+        }
+
+        if (SceneManager.GetActiveScene().name == "Stage2")
+        {
+            Stage = Stage + "2";
+        }
+    }
+
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -19,9 +38,16 @@ public class Restart : MonoBehaviour
 		
 	}
 
-    public void SceneRestart()
+    public void Gameover()
     {
-        Debug.Log("재시작");
-        SceneManager.LoadScene("ScriptLab");
+        StartCoroutine(SceneRestart());
     }
+
+    IEnumerator SceneRestart()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("재시작");
+        SceneManager.LoadScene(Stage);
+    }
+
 }

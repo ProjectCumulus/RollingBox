@@ -11,7 +11,6 @@ public class boxmove : MonoBehaviour
     int KeyInputCheck = 0;
     int RightLeftDistinction = 0;//좌우판별
     int BoxRotation = 1;//박스의 회전상태를 나타냄, 1일때 정지
-    public bool BoxOnGround = true;//상자가 땅에 있는지 떠있는지 판별함.
 
     Rigidbody2D rb;
 
@@ -46,10 +45,12 @@ public class boxmove : MonoBehaviour
     private void Update ()
     {
 
-        if (BoxOnGround==true&&Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.x, JumpPower);
-            BoxOnGround = false;
+            if (rb.velocity.y==0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, JumpPower);
+            }
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -91,20 +92,4 @@ public class boxmove : MonoBehaviour
             BoxRotation = 1;
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            BoxOnGround = false;
-        }
-    }//땅에서 벗어났을 때 점프를 못하게함
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer==8)
-        {
-            BoxOnGround = true;
-        }
-    }//땅에 닿았을 때 점프를 다시 할 수 있게 만들어줌
 }

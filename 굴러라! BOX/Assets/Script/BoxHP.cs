@@ -1,29 +1,32 @@
 ﻿using System.Collections; 
 using System.Collections.Generic; 
-using UnityEngine; 
- 
- 
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 public class BoxHP : MonoBehaviour 
 { 
     public int HP = 100;
     public int Heal = 30;
     int RainD = 1;
-    //Restart restart;
+
+    Restart restart;
     // Use this for initialization 
 
-    private void Awake()
-    {
-        /*
-        restart = null;
-        restart = GameObject.Find("RestartManager").GetComponent<Restart>();
-        */
-
-    }
+    
 
     void Start()
-      { 
-          InvokeRepeating("Rain", 0, 0.2f); 
-      }
+      {
+        restart = GameObject.Find("SceneManager").GetComponent <Restart>();
+        if (SceneManager.GetActiveScene().name == "ScriptLab")
+        {
+            StartCoroutine(Death());
+        }
+        if (SceneManager.GetActiveScene().name == "Stage1")
+        {
+            InvokeRepeating("Rain", 0, 0.2f);
+        }
+    }
 
     // Update is called once per frame 
     void Update()
@@ -31,7 +34,7 @@ public class BoxHP : MonoBehaviour
         if (HP <= 0)
         { 
             HP = 0;
-            Death();
+            StartCoroutine(Death());
         }
         if (HP >= 100)
             HP = 100; 
@@ -41,31 +44,29 @@ public class BoxHP : MonoBehaviour
       { 
           HP-=RainD; 
       } 
-  
+    /*
     void Fire()
       { 
           HP++; 
-      } 
+      } */
 
-    void Death()
+    IEnumerator Death()
     {
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
         Debug.Log("파괴됨.");
-        //restart.SceneRestart();
+        restart.Gameover();
+        gameObject.SetActive(false);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
       { 
+        /*
          if (collision.gameObject.tag == "Fire") 
          { 
               CancelInvoke("Rain"); 
               InvokeRepeating("Fire", 0, 0.05f); 
-         }  
- 
-         if (collision.gameObject.tag == "Umb") 
-         {
-            RainD = 0;
-         }
+         }  */
 
         if (collision.gameObject.tag == "Heal")
         {
@@ -86,11 +87,12 @@ public class BoxHP : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
       { 
+        /*
           if (collision.gameObject.tag == "Fire") 
           { 
               CancelInvoke("Fire"); 
               InvokeRepeating("Rain", 0, 0.2f); 
-          }
+          }*/
 
         if (collision.gameObject.tag == "Umb")
         {
