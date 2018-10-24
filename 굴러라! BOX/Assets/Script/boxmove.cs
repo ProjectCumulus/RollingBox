@@ -17,6 +17,7 @@ public class boxmove : MonoBehaviour
 
     private void Awake()
     {
+        /*
         if(StartPoint == 0)
         {
             transform.position = new Vector3(-13, -2, 0);
@@ -30,7 +31,7 @@ public class boxmove : MonoBehaviour
         if (StartPoint == 2)
         {
             transform.position = new Vector3(13, -2, 0);
-        }
+        }*/
     }
 
     // Use this for initialization
