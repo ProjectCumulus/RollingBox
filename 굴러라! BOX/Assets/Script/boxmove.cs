@@ -45,7 +45,7 @@ public class boxmove : MonoBehaviour
     private void Update ()
     {
 
-        if (BoxOnGround==true&&Input.GetKey(KeyCode.W))
+        if (BoxOnGround==true&&Input.GetKey(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpPower);
             BoxOnGround = false;
