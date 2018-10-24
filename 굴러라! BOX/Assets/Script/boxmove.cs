@@ -7,7 +7,7 @@ public class boxmove : MonoBehaviour
     public int StartPoint = 0;//스폰위치 판별 
     public float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
-    float JumpPower = 15;
+    public float JumpPower = 12;
     int KeyInputCheck = 0;
     int RightLeftDistinction = 0;//좌우판별
     int BoxRotation = 1;//박스의 회전상태를 나타냄, 1일때 정지
