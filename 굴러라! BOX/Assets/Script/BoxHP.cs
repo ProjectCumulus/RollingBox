@@ -11,13 +11,15 @@ public class BoxHP : MonoBehaviour
     int RainD = 1;
 
     Restart restart;
+    SimpleHealthBar HpBar;
     // Use this for initialization 
 
-    
+
 
     void Start()
       {
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
+        HpBar=GameObject.Find("Status Fill 00").GetComponent< SimpleHealthBar > ();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
             StartCoroutine(Death());
@@ -38,8 +40,10 @@ public class BoxHP : MonoBehaviour
             StartCoroutine(Death());
         }
         if (HP >= 100)
-            HP = 100; 
-      } 
+            HP = 100;
+
+        HpBar.UpdateBar(HP, 100);
+    } 
   
     void Rain()
       { 
