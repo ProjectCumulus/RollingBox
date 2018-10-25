@@ -17,13 +17,14 @@ public class BoxHP : MonoBehaviour
 
     void Start()
       {
-        restart = GameObject.Find("SceneManager").GetComponent <Restart>();
+        restart = GameObject.Find("덤덤이").GetComponent <Restart>();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
             StartCoroutine(Death());
         }
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
+            Debug.Log("st1");
             InvokeRepeating("Rain", 0, 0.2f);
         }
     }

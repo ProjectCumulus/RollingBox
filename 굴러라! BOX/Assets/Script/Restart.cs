@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     string Stage = "Stage";
+    int StageNumber = 0;
 
 
     private void Awake()
@@ -17,12 +18,12 @@ public class Restart : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
-            Stage = Stage + "1";
+            StageNumber = 1;
         }
 
         if (SceneManager.GetActiveScene().name == "Stage2")
         {
-            Stage = Stage + "2";
+            StageNumber = 2;
         }
     }
 
@@ -47,7 +48,14 @@ public class Restart : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         Debug.Log("재시작");
-        SceneManager.LoadScene(Stage);
+        SceneManager.LoadScene(Stage+StageNumber);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="Player")
+        {
+           SceneManager.LoadScene(Stage+(StageNumber+1));
+        }
+    }
 }
