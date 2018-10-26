@@ -7,7 +7,7 @@ public class HPUI : MonoBehaviour
 {
     public Image FA;
     BoxHP boxHP;
-    public int hp;
+    public float hp;
     // Use this for initialization
     void Start()
     {
