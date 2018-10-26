@@ -10,6 +10,8 @@ TagManager:
   - NextScene
   - Heal
   - LagerTrap
+  - FallingTrap
+  - Ground
   layers:
   - Default
   - TransparentFX

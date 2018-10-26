@@ -38,7 +38,7 @@ public class BoxHP : MonoBehaviour
 
     } 
   
-    public void HpChage(float Damage)
+    public void HpChange(float Damage)
     {
         HP -= Damage;
         if (HP <= 0)
@@ -55,7 +55,7 @@ public class BoxHP : MonoBehaviour
 
     void Rain()
     {
-        HpChage(RainDamage);
+        HpChange(RainDamage);
     } 
 
     IEnumerator Death()
@@ -71,17 +71,22 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Heal")
         {
-            HpChage(-30);
+            HpChange(-30);
         }
 
         if (collision.gameObject.tag == "WaterTrap")
         {
-            HpChage(30);
+            HpChange(30);
+        }
+
+        if (collision.gameObject.tag == "FallingTrap")
+        {
+            HpChange(30);
         }
 
         if (collision.gameObject.tag == "LagerTrap")
         {
-            HpChage(100);
+            HpChange(100);
         }
     }
 

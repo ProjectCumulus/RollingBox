@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PeriodicTrap : MonoBehaviour {
 
+    public float DelayTime = 0;
     public float ActiveTime = 1;
     public float CycleTime = 1;
 
@@ -26,6 +27,8 @@ public class PeriodicTrap : MonoBehaviour {
 
     IEnumerator Active()
     {
+        yield return new WaitForSeconds(DelayTime);
+
         while (true)
         {
             Sprite.enabled = true;
