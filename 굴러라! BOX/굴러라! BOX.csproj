@@ -241,6 +241,7 @@
     <Compile Include="Assets\Script\FlatUDMove.cs" />
     <Compile Include="Assets\Script\HealPack.cs" />
     <Compile Include="Assets\Script\HPUI.cs" />
+    <Compile Include="Assets\Script\PeriodicTrap.cs" />
     <Compile Include="Assets\Script\Rain.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
     <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\AsteroidController.cs" />

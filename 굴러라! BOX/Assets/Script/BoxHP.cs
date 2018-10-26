@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 public class BoxHP : MonoBehaviour 
 { 
     public float HP = 100;
-    public int Heal = 30;
-    float RainD = 0.3f;
+    float RainDamage = 0.3f;
 
+
+    boxmove Boxmove;
     Restart restart;
     SimpleHealthBar HpBar;
     // Use this for initialization 
@@ -20,6 +21,7 @@ public class BoxHP : MonoBehaviour
     {
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
         HpBar=GameObject.Find("Status Fill 00").GetComponent<SimpleHealthBar> ();
+        Boxmove = GameObject.Find("Box").GetComponent<boxmove>();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
             //StartCoroutine(Death());
@@ -33,29 +35,35 @@ public class BoxHP : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
+
+    } 
+  
+    public void HpChage(float Damage)
+    {
+        HP -= Damage;
         if (HP <= 0)
-        { 
+        {
             HP = 0;
             StartCoroutine(Death());
         }
         if (HP >= 100)
+        {
             HP = 100;
-
+        }
         HpBar.UpdateBar(HP, 100);
-    } 
-  
+    }
+
     void Rain()
-      { 
-          HP-=RainD; 
-      } 
+    {
+        HpChage(RainDamage);
+    } 
 
     IEnumerator Death()
     {
+        Boxmove.enabled = false;
         yield return new WaitForSeconds(2f);
         Debug.Log("파괴됨.");
         restart.Gameover();
-        gameObject.SetActive(false);
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,26 +71,30 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Heal")
         {
-            HP = HP + Heal;
+            HpChage(-30);
         }
 
         if (collision.gameObject.tag == "WaterTrap")
         {
-            HP = HP - 30;
-            
+            HpChage(30);
+        }
+
+        if (collision.gameObject.tag == "LagerTrap")
+        {
+            HpChage(100);
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        RainD = 0;
+        RainDamage = 0;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     { 
         if (collision.gameObject.tag == "Umb")
         {
-            RainD = 0.3f;
+            RainDamage = 0.3f;
         }
     } 
   } 

@@ -9,6 +9,7 @@ TagManager:
   - WaterTrap
   - NextScene
   - Heal
+  - LagerTrap
   layers:
   - Default
   - TransparentFX
