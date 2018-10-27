@@ -12,6 +12,7 @@ public class FallTrigger : MonoBehaviour
         Fall = GetComponentInParent<FallingTrap>();
         Fall.enabled = false;
         this.transform.parent = null;
+        transform.position = new Vector2(Fall.transform.position.x - 2, 0.5f);
     }
 
     void Start ()
