@@ -267,12 +267,12 @@ Prefab:
     - target: {fileID: 114558370136803444, guid: e770d44769db654408b51350b50188fc,
         type: 2}
       propertyPath: JumpPower
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 114558370136803444, guid: e770d44769db654408b51350b50188fc,
         type: 2}
       propertyPath: MoveSpeed
-      value: 0.02
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 114737056699378544, guid: e770d44769db654408b51350b50188fc,
         type: 2}

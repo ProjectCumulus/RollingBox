@@ -101,15 +101,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPoint: 0
-  MoveSpeed: 0.03
-  JumpPower: 13
+  MoveSpeed: 0.025
+  JumpPower: 17
 --- !u!114 &114737056699378544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385184351758270}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 043a3d0331081c146915212fa64ce84d, type: 3}
   m_Name: 
