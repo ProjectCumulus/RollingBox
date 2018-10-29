@@ -2640,11 +2640,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 876035844}
     m_Modifications:
-    - target: {fileID: 111863638523553322, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4183447477239790, guid: d711db65e45359048ac1ec20c848a419, type: 2}
       propertyPath: m_LocalPosition.x
       value: 50
@@ -2681,42 +2676,6 @@ Prefab:
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 50"
       objectReference: {fileID: 0}
-    - target: {fileID: 212912524366390610, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: dde6938964e4b414a809b08bcc0ca1c5,
-        type: 3}
-    - target: {fileID: 212912524366390610, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114538064330611332, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: CycleTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 111863638523553322, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_PlayAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111863638523553322, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_AnimatePhysics
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111863638523553322, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Animation
-      value: 
-      objectReference: {fileID: 7400000, guid: 228532e857491164da1351918ebf6a8a, type: 2}
-    - target: {fileID: 111863638523553322, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Animations.Array.data[0]
-      value: 
-      objectReference: {fileID: 7400000, guid: 228532e857491164da1351918ebf6a8a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_IsPrefabParent: 0

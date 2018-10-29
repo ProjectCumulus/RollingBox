@@ -22,8 +22,6 @@ GameObject:
   - component: {fileID: 212912524366390610}
   - component: {fileID: 61865125660818468}
   - component: {fileID: 114538064330611332}
-  - component: {fileID: 111863638523553322}
-  - component: {fileID: 95986099314816696}
   m_Layer: 0
   m_Name: "\uB808\uC774\uC800"
   m_TagString: LagerTrap
@@ -69,37 +67,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 11}
   m_EdgeRadius: 0
---- !u!95 &95986099314816696
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162293253179988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d6239dde1b87e043bd4dc5f064c194f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &111863638523553322
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162293253179988}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 228532e857491164da1351918ebf6a8a, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 1
-  m_CullingType: 0
 --- !u!114 &114538064330611332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,8 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayTime: 0
-  ActiveTime: 2
-  CycleTime: 4
+  ActiveTime: 1
+  CycleTime: 1
 --- !u!212 &212912524366390610
 SpriteRenderer:
   m_ObjectHideFlags: 1
