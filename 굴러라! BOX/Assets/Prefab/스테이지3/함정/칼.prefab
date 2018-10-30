@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Able_Destroy: 0
+  FallSpeed: 0.6
 --- !u!212 &212459213025104862
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,6 +7,7 @@ public class FallingTrap : MonoBehaviour
     public bool Able_Destroy = true;
     Rigidbody2D rb;
     bool wf = true;
+    public float FallSpeed = 0.3f;
     // Use this for initialization
 
     private void Awake()
@@ -33,12 +34,17 @@ public class FallingTrap : MonoBehaviour
 
         while(wf)
         {
-            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * 0.6f);
+            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * FallSpeed);
             if(transform.position.y<0)
             {
+                this.gameObject.tag = "Untagged";
                 wf = false;
                 rb.velocity = new Vector2(0, 0);
                 transform.position = new Vector2(transform.position.x, 0.5f);
+                if (Able_Destroy)
+                {
+                    StartCoroutine(Broke());
+                }
             }
             yield return new WaitForFixedUpdate();
         }
@@ -55,12 +61,6 @@ public class FallingTrap : MonoBehaviour
     {
         if (Able_Destroy)
         {
-            if (collision.tag == "Ground")
-            {
-                Debug.Log("ground");
-                StartCoroutine(Broke());
-            }
-
             if (collision.tag == "Player")
             {
                 Debug.Log("player");

@@ -21,12 +21,12 @@ public class cameracontroll : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(13, transform.position.y, transform.position.z);
+            transform.position = new Vector3(15, transform.position.y, transform.position.z);
         }
-        if(this.transform.position.x<13)
+        if(this.transform.position.x<15)
         {
             Mapout = true;
-            transform.position = new Vector3(13, transform.position.y, transform.position.z);
+            transform.position = new Vector3(15, transform.position.y, transform.position.z);
         }
         else
             Mapout = false;
