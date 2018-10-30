@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FallingTrap : MonoBehaviour
 {
+    public bool Able_Destroy = true;
     Rigidbody2D rb;
+    bool wf = true;
     // Use this for initialization
 
     private void Awake()
@@ -16,7 +18,8 @@ public class FallingTrap : MonoBehaviour
     private void Start ()
     {
         this.gameObject.tag = "FallingTrap";
-        rb.gravityScale = 1;
+        //rb.gravityScale = 1;
+        StartCoroutine(Fall());
     }
 	
 	// Update is called once per frame
@@ -25,6 +28,21 @@ public class FallingTrap : MonoBehaviour
 
 	}
 
+    IEnumerator Fall()
+    {
+
+        while(wf)
+        {
+            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * 0.15f);
+            if(transform.position.y<0)
+            {
+                wf = false;
+                rb.velocity = new Vector2(0, 0);
+                transform.position = new Vector2(transform.position.x, 0.5f);
+            }
+            yield return new WaitForFixedUpdate();
+        }
+    }
 
     IEnumerator Broke()
     {
@@ -35,16 +53,19 @@ public class FallingTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Ground")
+        if (Able_Destroy)
         {
-            Debug.Log("ground");
-            StartCoroutine(Broke());
-        }
+            if (collision.tag == "Ground")
+            {
+                Debug.Log("ground");
+                StartCoroutine(Broke());
+            }
 
-        if (collision.tag == "Player")
-        {
-            Debug.Log("player");
-            StartCoroutine(Broke());
+            if (collision.tag == "Player")
+            {
+                Debug.Log("player");
+                StartCoroutine(Broke());
+            }
         }
     }
 }

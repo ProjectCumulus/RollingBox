@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: 0
   MoveSpeed: 0.025
-  JumpPower: 17
+  JumpPower: 16
 --- !u!114 &114737056699378544
 MonoBehaviour:
   m_ObjectHideFlags: 1
