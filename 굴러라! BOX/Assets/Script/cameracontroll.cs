@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class cameracontroll : MonoBehaviour
 {
-    GameObject player;
+    GameObject Box;
+    bool Mapout = false;
 	// Use this for initialization
 	void Start ()
     {
-        this.player = GameObject.Find("Box");
+        this.Box = GameObject.Find("Box");
 	}
 	
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        Vector3 playerPros = this.player.transform.position;
-        transform.position = new Vector3(playerPros.x,transform.position.y, transform.position.z);
-	}
+        if (!Mapout)
+        {
+            transform.position = new Vector3(Box.transform.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(13, transform.position.y, transform.position.z);
+        }
+        if(this.transform.position.x<13)
+        {
+            Mapout = true;
+            transform.position = new Vector3(13, transform.position.y, transform.position.z);
+        }
+        else
+            Mapout = false;
+    }
 }
