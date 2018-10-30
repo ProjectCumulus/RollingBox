@@ -104,6 +104,16 @@ public class BoxHP : MonoBehaviour
         {
             InvokeRepeating("Poison", 0.5f, 0.5f);
         }
+
+        if (collision.gameObject.tag == "Spike")
+        {
+            HpChange(30);
+        }
+
+        if (collision.gameObject.tag == "Mine")
+        {
+            HpChange(100);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -125,5 +135,14 @@ public class BoxHP : MonoBehaviour
         {
             Invoke("PoisonEnd", 2.5f);
         }
-    } 
-  } 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.collider.tag == "Sword")
+        {
+            HpChange(50);
+        }
+    }
+} 

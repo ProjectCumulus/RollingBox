@@ -15,6 +15,7 @@ TagManager:
   - PoisonGas
   - Sword
   - Spike
+  - Mine
   layers:
   - Default
   - TransparentFX
