@@ -13,6 +13,8 @@ TagManager:
   - FallingTrap
   - Ground
   - PoisonGas
+  - Sword
+  - Spike
   layers:
   - Default
   - TransparentFX

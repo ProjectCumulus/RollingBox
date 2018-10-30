@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FallTrigger : MonoBehaviour
 {
+    public float TriggerPositionX = -2;
     FallingTrap Fall;
     bool Usable = true;
     // Use this for initialization
@@ -12,7 +13,7 @@ public class FallTrigger : MonoBehaviour
         Fall = GetComponentInParent<FallingTrap>();
         Fall.enabled = false;
         this.transform.parent = null;
-        transform.position = new Vector2(Fall.transform.position.x - 2, 0.5f);
+        transform.position = new Vector2(Fall.transform.position.x+TriggerPositionX, 5);
     }
 
     void Start ()

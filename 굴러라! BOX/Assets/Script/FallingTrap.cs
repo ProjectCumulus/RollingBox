@@ -33,7 +33,7 @@ public class FallingTrap : MonoBehaviour
 
         while(wf)
         {
-            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * 0.15f);
+            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * 0.6f);
             if(transform.position.y<0)
             {
                 wf = false;
