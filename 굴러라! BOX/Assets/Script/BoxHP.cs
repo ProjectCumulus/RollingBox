@@ -58,6 +58,17 @@ public class BoxHP : MonoBehaviour
         HpChange(RainDamage);
     } 
 
+    void Poison()
+    {
+        Debug.Log("Poison");
+        HpChange(2);
+    }
+
+    void PoisonEnd()
+    {
+        CancelInvoke("Poison");
+    }
+
     IEnumerator Death()
     {
         Boxmove.enabled = false;
@@ -88,11 +99,19 @@ public class BoxHP : MonoBehaviour
         {
             HpChange(100);
         }
+
+        if (collision.gameObject.tag == "PoisonGas")
+        {
+            InvokeRepeating("Poison", 0.5f, 0.5f);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        RainDamage = 0;
+        if (collision.gameObject.tag == "Umb")
+        {
+            RainDamage = 0;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -100,6 +119,11 @@ public class BoxHP : MonoBehaviour
         if (collision.gameObject.tag == "Umb")
         {
             RainDamage = 0.3f;
+        }
+
+        if (collision.gameObject.tag == "PoisonGas")
+        {
+            Invoke("PoisonEnd", 2.5f);
         }
     } 
   } 

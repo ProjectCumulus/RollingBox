@@ -12,6 +12,7 @@ TagManager:
   - LagerTrap
   - FallingTrap
   - Ground
+  - PoisonGas
   layers:
   - Default
   - TransparentFX

@@ -2569,6 +2569,10 @@ Prefab:
       propertyPath: m_Name
       value: "\uAC00\uC2A4 65.5"
       objectReference: {fileID: 0}
+    - target: {fileID: 1566142340010586, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
+      propertyPath: m_TagString
+      value: PoisonGas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
   m_IsPrefabParent: 0
@@ -2676,7 +2680,13 @@ Prefab:
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 50"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 95747169825539048, guid: d711db65e45359048ac1ec20c848a419,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2436090750d70b048bfe9c6104731237, type: 2}
+    m_RemovedComponents:
+    - {fileID: 95747169825539048, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &942188044
