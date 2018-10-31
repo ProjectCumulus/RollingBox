@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class cameracontroll : MonoBehaviour
 {
-    GameObject Box;
+    public GameObject target;
     bool Mapout = false;
 	// Use this for initialization
 	void Start ()
     {
-        this.Box = GameObject.Find("Box");
+        //this.Box = GameObject.Find("Box");
 	}
 	
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class cameracontroll : MonoBehaviour
     {
         if (!Mapout)
         {
-            transform.position = new Vector3(Box.transform.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
         }
         else
         {

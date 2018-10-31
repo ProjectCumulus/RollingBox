@@ -6,10 +6,12 @@ public class FallTrigger : MonoBehaviour
 {
     public float TriggerPositionX = -2;
     FallingTrap Fall;
-    bool Usable = true;
+    bool Usable;
+    public GameObject target;
     // Use this for initialization
     private void Awake()
     {
+        Usable = true;
         Fall = GetComponentInParent<FallingTrap>();
         Fall.enabled = false;
         this.transform.parent = null;
@@ -29,10 +31,11 @@ public class FallTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Usable==true)
+        if(Usable)
         {
             if(collision.tag=="Player")
             {
+                Debug.Log("충돌");
                 Fall.enabled = true;
                 Usable = false;
             }

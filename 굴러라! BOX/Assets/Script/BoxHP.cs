@@ -9,8 +9,8 @@ public class BoxHP : MonoBehaviour
     public float HP = 100;
     float RainDamage = 0.3f;
 
-
-    boxmove Boxmove;
+    public GameObject Player;
+    PlatformerMotor2D _Motor;
     Restart restart;
     SimpleHealthBar HpBar;
     // Use this for initialization 
@@ -21,7 +21,7 @@ public class BoxHP : MonoBehaviour
     {
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
         HpBar=GameObject.Find("Status Fill 00").GetComponent<SimpleHealthBar> ();
-        Boxmove = GameObject.Find("Box").GetComponent<boxmove>();
+        _Motor = Player.GetComponent<PlatformerMotor2D>();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
             //StartCoroutine(Death());
@@ -71,7 +71,7 @@ public class BoxHP : MonoBehaviour
 
     IEnumerator Death()
     {
-        Boxmove.enabled = false;
+        _Motor.frozen = true;
         yield return new WaitForSeconds(2f);
         Debug.Log("파괴됨.");
         restart.Gameover();

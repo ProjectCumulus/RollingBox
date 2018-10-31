@@ -4,33 +4,19 @@ using UnityEngine;
 
 public class boxmove : MonoBehaviour
 {
-    public int StartPoint = 0;//스폰위치 판별 
     public float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
-    public float JumpPower = 12;
+    public float JumpPower = 16;
     int KeyInputCheck = 0;
     int RightLeftDistinction = 0;//좌우판별
     int BoxRotation = 1;//박스의 회전상태를 나타냄, 1일때 정지
+    bool JumpAble = true;
 
     Rigidbody2D rb;
 
     private void Awake()
     {
-        /*
-        if(StartPoint == 0)
-        {
-            transform.position = new Vector3(-13, -2, 0);
-        }
 
-        if (StartPoint == 1)
-        {
-            transform.position = new Vector3(0, -2, 0);
-        }
-
-        if (StartPoint == 2)
-        {
-            transform.position = new Vector3(13, -2, 0);
-        }*/
     }
 
     // Use this for initialization
@@ -44,10 +30,15 @@ public class boxmove : MonoBehaviour
 // Update is called once per frame
     private void Update ()
     {
+        
+    }
 
-        if (Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.W))
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
-            if (rb.velocity.y==0)
+            if (JumpAble)
             {
                 rb.velocity = new Vector2(rb.velocity.x, JumpPower);
             }
@@ -71,7 +62,7 @@ public class boxmove : MonoBehaviour
             }
         }
 
-        if (KeyInputCheck == 1 && BoxRotation==1)
+        if (KeyInputCheck == 1 && BoxRotation == 1)
         {
             KeyInputCheck = 0;
             rb.freezeRotation = true;
@@ -90,6 +81,22 @@ public class boxmove : MonoBehaviour
             rb.freezeRotation = false;
             CancelInvoke("BoxMove");
             BoxRotation = 1;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer==8)
+        {
+            JumpAble = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            JumpAble = false;
         }
     }
 }

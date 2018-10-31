@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4734552983195258}
   - component: {fileID: 212799427087165348}
   - component: {fileID: 61897874507846602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\uBC14\uB2E53"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
