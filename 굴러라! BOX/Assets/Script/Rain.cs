@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Rain : MonoBehaviour
 {
-    GameObject Box;
+    public GameObject Player;
     bool Mapout = false;
     void Start()
     {
-        this.Box = GameObject.Find("Box");
+
     }
 
     void LateUpdate()
     {
         if (!Mapout)
         {
-            transform.position = new Vector3(Box.transform.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
         }
         else
         {

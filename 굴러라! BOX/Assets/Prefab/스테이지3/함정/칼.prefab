@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50659242765091118}
   - component: {fileID: 61417621783998624}
   - component: {fileID: 114951984304015390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\uCE7C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerPositionX: -4
+  target: {fileID: 0}
 --- !u!114 &114951984304015390
 MonoBehaviour:
   m_ObjectHideFlags: 1
