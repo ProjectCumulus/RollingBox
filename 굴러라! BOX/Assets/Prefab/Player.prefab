@@ -158,13 +158,13 @@ MonoBehaviour:
   oneWayPlatformsAreWalls: 0
   movingPlatformLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   additionalRaycastsPerSide: 1
   groundSpeed: 4
   timeToGroundSpeed: 0.1
-  groundStopDistance: 0.333
+  groundStopDistance: 0.2
   airSpeed: 4
-  changeDirectionInAir: 0
+  changeDirectionInAir: 1
   timeToAirSpeed: 0.2
   airStopDistance: 2
   fallSpeed: 16
@@ -180,7 +180,7 @@ MonoBehaviour:
   enableSlopes: 1
   angleAllowedForMoving: 50
   minimumSpeedToMoveUpSlipperySlope: 7.5
-  changeSpeedOnSlopes: 0
+  changeSpeedOnSlopes: 1
   speedMultiplierOnSlope: 0.75
   stickOnGround: 0
   distanceToCheckToStick: 0.4

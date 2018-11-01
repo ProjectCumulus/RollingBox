@@ -210,7 +210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (7)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -317,7 +317,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (10)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -685,7 +685,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (11)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -929,7 +929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (26)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -1067,7 +1067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (9)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -1408,7 +1408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (12)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -2238,7 +2238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (15)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -2490,7 +2490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (8)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -3027,7 +3027,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 645458051}
-  - component: {fileID: 645458050}
   m_Layer: 0
   m_Name: "\uBC14\uB2E5"
   m_TagString: Untagged
@@ -3035,50 +3034,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &645458050
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 645458049}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
 --- !u!4 &645458051
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (24)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -4419,7 +4374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (25)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -4721,7 +4676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (27)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -5117,7 +5072,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (21)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -5939,7 +5894,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (13)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -6033,14 +5988,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 61273884556287428, guid: 940d1bfeee21a4c448f3e20b90b0b8b8,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (2)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -6439,7 +6389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (16)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -7079,7 +7029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (19)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -8031,7 +7981,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (22)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -8902,6 +8852,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
+        type: 2}
+      propertyPath: oneWayPlatformsAreWalls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
+        type: 2}
+      propertyPath: groundStopDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
+        type: 2}
+      propertyPath: changeDirectionInAir
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb5488db8b68b34a956add988a87a7e, type: 2}
   m_IsPrefabParent: 0
@@ -9122,7 +9087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (3)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -9308,7 +9273,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (5)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -9359,7 +9324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (14)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -9461,7 +9426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (29)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
@@ -9609,7 +9574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001778470379134, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}
       propertyPath: m_Name
-      value: "\uCE7C (20)"
+      value: "\uCE7C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 940d1bfeee21a4c448f3e20b90b0b8b8, type: 2}

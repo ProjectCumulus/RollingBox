@@ -114,6 +114,11 @@ public class BoxHP : MonoBehaviour
         {
             HpChange(100);
         }
+
+        if (collision.gameObject.tag == "Sword")
+        {
+            HpChange(50);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -137,12 +142,4 @@ public class BoxHP : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.collider.tag == "Sword")
-        {
-            HpChange(50);
-        }
-    }
 } 
