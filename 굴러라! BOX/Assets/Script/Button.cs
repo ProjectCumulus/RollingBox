@@ -30,23 +30,36 @@ public class Button : MonoBehaviour
 
     public void TimeStop()
     {
-        if(Time.timeScale<1)
+        if(Time.timeScale==1)
         {
-            Time.timeScale = 1f;
+            StartCoroutine(TheWorld(true));
         }
         else
         {
-            StartCoroutine(TheWorld());
+            StartCoroutine(TheWorld(false));
         }
     }
 
-    IEnumerator TheWorld()
+    IEnumerator TheWorld(bool stand)
     {
-        for (int i = 25; i >-1; i--)
+        if (stand)
         {
-            yield return new WaitForSecondsRealtime(0.04f);
-            Time.timeScale = 0.04f * i;
+            for (int i = 25; i > -1; i--)
+            {
+                yield return new WaitForSecondsRealtime(0.04f);
+                Time.timeScale = 0.04f * i;
+            }
         }
+        else
+        {
+            for (int i = 0; i < 26; i++)
+            {
+                yield return new WaitForSecondsRealtime(0.04f);
+                Time.timeScale = 0.04f * i;
+            }
+        }
+        Debug.Log(Time.timeScale);
+
     }
 
 }
