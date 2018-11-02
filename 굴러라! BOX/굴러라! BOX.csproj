@@ -234,17 +234,16 @@
   <ItemGroup>
     <Compile Include="Assets\Script\BoxHP.cs" />
     <Compile Include="Assets\Script\boxmove.cs" />
+    <Compile Include="Assets\Script\Button.cs" />
     <Compile Include="Assets\Script\cameracontroll.cs" />
     <Compile Include="Assets\Script\EasingFunctions.cs" />
     <Compile Include="Assets\Script\FallingTrap.cs" />
     <Compile Include="Assets\Script\FallTrigger.cs" />
-    <Compile Include="Assets\Script\FlatLRMove.cs" />
-    <Compile Include="Assets\Script\FlatOnOff.cs" />
     <Compile Include="Assets\Script\FlatRotation.cs" />
-    <Compile Include="Assets\Script\FlatUDMove.cs" />
     <Compile Include="Assets\Script\Globals.cs" />
     <Compile Include="Assets\Script\HealPack.cs" />
     <Compile Include="Assets\Script\HPUI.cs" />
+    <Compile Include="Assets\Script\MainMove.cs" />
     <Compile Include="Assets\Script\MovingPlatformMotor2D.cs" />
     <Compile Include="Assets\Script\PeriodicTrap.cs" />
     <Compile Include="Assets\Script\PlatformerMotor2D.cs" />

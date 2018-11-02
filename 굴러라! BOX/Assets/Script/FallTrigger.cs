@@ -7,7 +7,7 @@ public class FallTrigger : MonoBehaviour
     public float TriggerPositionX = -2;
     FallingTrap Fall;
     bool Usable;
-    public GameObject target;
+    public GameObject FallingTrap;
     // Use this for initialization
     private void Awake()
     {
