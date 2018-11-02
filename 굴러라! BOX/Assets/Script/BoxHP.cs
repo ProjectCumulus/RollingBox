@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class BoxHP : MonoBehaviour 
 { 
     public float HP = 100;
-    float RainDamage = 0.3f;
+    float RainDamage = 1f;
 
     public GameObject Player;
     PlatformerMotor2D _Motor;
