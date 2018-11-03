@@ -19,6 +19,9 @@ public class FlatRotation : MonoBehaviour
 
     void FlatRotate()
     {
-        this.transform.Rotate(new Vector3(0, 0, 90));//회전
+        if (Global.TheWorld > 0)
+        {
+            this.transform.Rotate(new Vector3(0, 0, 90));//회전
+        }
     }
 }

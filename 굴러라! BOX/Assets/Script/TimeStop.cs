@@ -20,7 +20,7 @@ public class TimeStop : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             StartCoroutine(TimeChaing());
         }
@@ -32,7 +32,7 @@ public class TimeStop : MonoBehaviour
         {
             while (Global.TheWorld > 0)
             {
-                yield return new WaitForSecondsRealtime(0.01f);
+                yield return new WaitForSecondsRealtime(0.02f);
                 Global.TheWorld -= 0.05f;
             }
             Global.TheWorld = 0;
@@ -41,7 +41,7 @@ public class TimeStop : MonoBehaviour
         {
             while (Global.TheWorld < 1)
             {
-                yield return new WaitForSecondsRealtime(0.01f);
+                yield return new WaitForSecondsRealtime(0.02f);
                 Global.TheWorld += 0.05f;
             }
             Global.TheWorld = 1;

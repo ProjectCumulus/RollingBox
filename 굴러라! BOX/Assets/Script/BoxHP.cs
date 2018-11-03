@@ -55,7 +55,7 @@ public class BoxHP : MonoBehaviour
 
     void Rain()
     {
-        HpChange(RainDamage);
+        HpChange(RainDamage*Global.TheWorld);  
     } 
 
     void Poison()
