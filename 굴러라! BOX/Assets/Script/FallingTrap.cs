@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FallingTrap : MonoBehaviour
 {
     public bool Able_Destroy = true;
@@ -9,22 +10,27 @@ public class FallingTrap : MonoBehaviour
     bool wf = true;
     public float FallSpeed = 0.3f;
     float FallVelocity = 0;
+ 
     // Use this for initialization
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         this.gameObject.tag = "Untagged";
+
+     
     }
 
     private void Start ()
     {
         this.gameObject.tag = "FallingTrap";
         StartCoroutine(Fall());
+  
+
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
 
     }
@@ -68,5 +74,13 @@ public class FallingTrap : MonoBehaviour
                 StartCoroutine(Broke());
             }
         }
+        soundManager.instance.PlaySound();
+
+
     }
+
+
+
+
+
 }

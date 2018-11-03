@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.10f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -245,7 +247,6 @@
     <Compile Include="Assets\Script\EasingFunctions.cs" />
     <Compile Include="Assets\Script\FallingTrap.cs" />
     <Compile Include="Assets\Script\FallTrigger.cs" />
-    <Compile Include="Assets\Script\final.cs" />
     <Compile Include="Assets\Script\FlatRotation.cs" />
     <Compile Include="Assets\Script\Globals.cs" />
     <Compile Include="Assets\Script\HealPack.cs" />
@@ -257,6 +258,7 @@
     <Compile Include="Assets\Script\PlayerController2D.cs" />
     <Compile Include="Assets\Script\Rain.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
+    <Compile Include="Assets\Script\soundManager.cs" />
     <Compile Include="Assets\Script\TimeStop.cs" />
     <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\AsteroidController.cs" />
     <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\GameManager.cs" />
