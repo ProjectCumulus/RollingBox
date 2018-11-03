@@ -6,7 +6,7 @@ public class soundManager : MonoBehaviour
 {
     public AudioClip soundExplosion; 
     AudioSource myAudio; 
-    public static soundManager instance; .
+    public static soundManager instance;
     void Awake() 
     {
         if (soundManager.instance == null) //incetance가 비어있는지 검사합니다.
