@@ -356,16 +356,6 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 66271430}
-  - component: {fileID: 66271429}
-  - component: {fileID: 66271428}
-  - component: {fileID: 66271427}
-  - component: {fileID: 66271431}
-  m_Layer: 5
-  m_Name: Timer
-  m_TagString: Untagged
-=======
   - component: {fileID: 77251937}
   - component: {fileID: 77251940}
   - component: {fileID: 77251939}
@@ -373,7 +363,6 @@ GameObject:
   m_Layer: 8
   m_Name: "\uBC1C\uD3102\uC9DC\uB9AC (14)"
   m_TagString: Umb
->>>>>>> 2b68b6b86185b4a60596f53a8ae590ce9d1a1f82
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
