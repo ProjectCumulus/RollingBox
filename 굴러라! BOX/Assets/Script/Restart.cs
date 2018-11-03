@@ -30,6 +30,12 @@ public class Restart : MonoBehaviour
         {
             StageNumber = 3;
         }
+
+       /* if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            StageNumber = 4;
+        }
+        */
     }
 
     // Use this for initialization
