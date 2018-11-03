@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class soundManager : MonoBehaviour
 {
-    public AudioClip soundExplosion; //재생할 소리를 변수로 담습니다.
-    AudioSource myAudio; //AudioSorce 컴포넌트를 변수로 담습니다.
-    public static soundManager instance;  //자기자신을 변수로 담습니다.
-    void Awake() //Start보다도 먼저, 객체가 생성될때 호출됩니다
+    public AudioClip soundExplosion; 
+    AudioSource myAudio; 
+    public static soundManager instance; .
+    void Awake() 
     {
         if (soundManager.instance == null) //incetance가 비어있는지 검사합니다.
         {
@@ -16,11 +16,11 @@ public class soundManager : MonoBehaviour
     }
     void Start()
     {
-        myAudio = this.gameObject.GetComponent<AudioSource>(); //AudioSource 오브젝트를 변수로 담습니다.
+        myAudio = this.gameObject.GetComponent<AudioSource>(); 
     }
     public void PlaySound()
     {
-        myAudio.PlayOneShot(soundExplosion); //soundExplosion을 재생합니다.
+        myAudio.PlayOneShot(soundExplosion); 
     }
     void Update()
     {
