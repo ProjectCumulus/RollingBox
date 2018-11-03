@@ -245,6 +245,7 @@
     <Compile Include="Assets\Script\EasingFunctions.cs" />
     <Compile Include="Assets\Script\FallingTrap.cs" />
     <Compile Include="Assets\Script\FallTrigger.cs" />
+    <Compile Include="Assets\Script\final.cs" />
     <Compile Include="Assets\Script\FlatRotation.cs" />
     <Compile Include="Assets\Script\Globals.cs" />
     <Compile Include="Assets\Script\HealPack.cs" />
