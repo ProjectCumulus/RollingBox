@@ -4,39 +4,17 @@ using UnityEngine;
 
 public class PeriodicTrap : MonoBehaviour {
 
-    public float DelayTime = 0;
-    public float ActiveTime = 1;
-    public float CycleTime = 1;
-
-    private SpriteRenderer Sprite;
-    private BoxCollider2D Collider;
+    Animator Ani;
 
 	// Use this for initialization
 	void Start ()
     {
-        Sprite = GetComponent<SpriteRenderer>();
-        Collider = GetComponent<BoxCollider2D>();
-        StartCoroutine(Active());
+        Ani=GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-
+        Ani.speed=Global.TheWorld;
 	}
-
-    IEnumerator Active()
-    {
-        yield return new WaitForSeconds(DelayTime);
-
-        while (true)
-        {
-            Sprite.enabled = true;
-            Collider.enabled = true;
-            yield return new WaitForSeconds(ActiveTime);
-            Sprite.enabled = false;
-            Collider.enabled = false;
-            yield return new WaitForSeconds(CycleTime);
-        }
-    }
 }

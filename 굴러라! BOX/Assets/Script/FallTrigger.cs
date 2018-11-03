@@ -31,7 +31,7 @@ public class FallTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Usable)
+        if(Usable&&Global.TheWorld>0)
         {
             if(collision.tag=="Player")
             {

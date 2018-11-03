@@ -8,6 +8,7 @@ public class FallingTrap : MonoBehaviour
     Rigidbody2D rb;
     bool wf = true;
     public float FallSpeed = 0.3f;
+    float FallVelocity = 0;
     // Use this for initialization
 
     private void Awake()
@@ -19,7 +20,6 @@ public class FallingTrap : MonoBehaviour
     private void Start ()
     {
         this.gameObject.tag = "FallingTrap";
-        //rb.gravityScale = 1;
         StartCoroutine(Fall());
     }
 	
@@ -27,14 +27,15 @@ public class FallingTrap : MonoBehaviour
 	void Update ()
     {
 
-	}
+    }
 
     IEnumerator Fall()
     {
 
         while(wf)
         {
-            rb.velocity -= new Vector2(0, Time.deltaTime * 60 * FallSpeed);
+            FallVelocity -= FallSpeed * Time.deltaTime * 60 * Global.TheWorld;
+            rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
             if(transform.position.y<0)
             {
                 this.gameObject.tag = "Untagged";
