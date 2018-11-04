@@ -11,10 +11,6 @@ public class SoundManager : MonoBehaviour
     public float lowPitchRange = 0.95f; //  사운드 크기를 위 아래 5%씩
     public float highPitchRange = 1.05f; // 변화를 줌
 
-    
-
-
-
     public static SoundManager instance = null;
 
     void Awake()

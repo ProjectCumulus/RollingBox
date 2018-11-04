@@ -71,9 +71,8 @@ public class FallingTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SoundManager.instance.PlaySingle1(BreakSound);
         SoundManager.instance.PlaySingle2(fallsound);
-       
+
 
         if (Able_Destroy)
         {
@@ -83,13 +82,13 @@ public class FallingTrap : MonoBehaviour
                 StartCoroutine(Broke());
             }
         }
-       
+
 
 
     }
 
-
-
-
-
+    private void NewMethod()
+    {
+        SoundManager.instance.PlaySingle1(BreakSound);
+    }
 }
