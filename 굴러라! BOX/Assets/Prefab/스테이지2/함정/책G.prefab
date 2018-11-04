@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerPositionX: -2
+  FallingTrap: {fileID: 0}
 --- !u!114 &114946906008968252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81475c08320ded2478fdde7578ea4f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakSound: {fileID: 0}
+  fallsound: {fileID: 8300000, guid: 37314a8fabb08bd4e895872478b3d3a8, type: 3}
   Able_Destroy: 1
   FallSpeed: 0.3
 --- !u!212 &212880195647734526

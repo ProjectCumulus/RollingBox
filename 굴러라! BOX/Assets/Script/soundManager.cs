@@ -2,28 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class soundManager : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    public AudioClip soundExplosion; 
-    AudioSource myAudio; 
-    public static soundManager instance;
-    void Awake() 
+    public AudioSource efxSource1;
+    public AudioSource efxSource2;
+    public AudioSource efxSource3;
+
+    public float lowPitchRange = 0.95f; //  사운드 크기를 위 아래 5%씩
+    public float highPitchRange = 1.05f; // 변화를 줌
+
+    
+
+
+
+    public static SoundManager instance = null;
+
+    void Awake()
     {
-        if (soundManager.instance == null) //incetance가 비어있는지 검사합니다.
-        {
-            soundManager.instance = this; //자기자신을 담습니다.
-        }
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
+
+
+
+    public void PlaySingle1(AudioClip clip)
+    {
+        efxSource1.clip = clip;
+        efxSource1.Play();
+    }
+    public void PlaySingle2(AudioClip clip)
+    {
+        efxSource2.clip = clip;
+        efxSource2.Play();
+    }
+
+    public void PlaySingle3(AudioClip clip)
+    {
+        efxSource3.clip = clip;
+        efxSource3.Play();
+    }
+
     void Start()
     {
-        myAudio = this.gameObject.GetComponent<AudioSource>(); 
+      
     }
-    public void PlaySound()
-    {
-        myAudio.PlayOneShot(soundExplosion); 
-    }
-    void Update()
+     void Update()
     {
 
     }
+
 }

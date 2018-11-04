@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 212397386590924114}
   - component: {fileID: 114534479901639690}
   - component: {fileID: 50258148224320076}
-  - component: {fileID: 82155241658794590}
   m_Layer: 0
   m_Name: "\uC0BC\uAC01 \uD50C\uB77C\uC2A4\uD06C 35"
   m_TagString: Untagged
@@ -145,86 +144,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.8}
   m_EdgeRadius: 0
---- !u!82 &82155241658794590
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1826464208384100}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7b5d198bd130f4d408ad23fc4f3aa94b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &114534479901639690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81475c08320ded2478fdde7578ea4f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakSound: {fileID: 8300000, guid: 7b5d198bd130f4d408ad23fc4f3aa94b, type: 3}
+  fallsound: {fileID: 0}
+  knifesound: {fileID: 0}
   Able_Destroy: 1
   FallSpeed: 0.3
 --- !u!114 &114926917862464558
@@ -250,8 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerPositionX: -2
-  Fall: {fileID: 0}
-  Usable: 0
   FallingTrap: {fileID: 0}
 --- !u!212 &212397386590924114
 SpriteRenderer:

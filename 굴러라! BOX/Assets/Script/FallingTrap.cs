@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class FallingTrap : MonoBehaviour
 {
+    public AudioClip BreakSound;  //유리깨지는소리
+    public AudioClip fallsound;     //책떨어지는소리
+    public AudioClip knifesound; //칼 떨어지는 소리
+
     public bool Able_Destroy = true;
     Rigidbody2D rb;
     bool wf = true;
@@ -37,8 +41,7 @@ public class FallingTrap : MonoBehaviour
 
     IEnumerator Fall()
     {
-
-        while(wf)
+        while (wf)
         {
             FallVelocity -= FallSpeed * Time.deltaTime * 60 * Global.TheWorld;
             rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
@@ -66,7 +69,10 @@ public class FallingTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        soundManager.instance.PlaySound();
+        SoundManager.instance.PlaySingle1(BreakSound);
+        SoundManager.instance.PlaySingle2(fallsound);
+        SoundManager.instance.PlaySingle3(knifesound);
+
         if (Able_Destroy)
         {
             if (collision.tag == "Player")
