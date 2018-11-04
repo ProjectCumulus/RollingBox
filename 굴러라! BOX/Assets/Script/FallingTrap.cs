@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class FallingTrap : MonoBehaviour
 {
-    public AudioClip BreakSound;  //유리깨지는소리
-    public AudioClip fallsound;     //책떨어지는소리
-    public AudioClip knifesound; //칼 떨어지는 소리
+   // public AudioClip BreakSound;  //유리깨지는소리
+    //public AudioClip fallsound;     //책떨어지는소리
+   // public AudioClip knifesound; //칼 떨어지는 소리
 
     public bool Able_Destroy = true;
     Rigidbody2D rb;
@@ -47,11 +47,14 @@ public class FallingTrap : MonoBehaviour
             rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
             if(transform.position.y<0)
             {
-                SoundManager.instance.PlaySingle3(knifesound);
+                GetComponent<AudioSource>().Play();
                 this.gameObject.tag = "Untagged";
                 wf = false;
                 rb.velocity = new Vector2(0, 0);
                 transform.position = new Vector2(transform.position.x, 0.5f);
+
+                //SoundManager.instance.PlaySingle3(knifesound);
+
                 if (Able_Destroy)
                 {
                     StartCoroutine(Broke());
@@ -71,7 +74,9 @@ public class FallingTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SoundManager.instance.PlaySingle2(fallsound);
+        //SoundManager.instance.PlaySingle1(BreakSound);
+        //SoundManager.instance.PlaySingle2(fallsound);
+        GetComponent<AudioSource>().Play();
 
 
         if (Able_Destroy)
@@ -87,8 +92,4 @@ public class FallingTrap : MonoBehaviour
 
     }
 
-    private void NewMethod()
-    {
-        SoundManager.instance.PlaySingle1(BreakSound);
-    }
 }

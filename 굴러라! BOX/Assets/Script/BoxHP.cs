@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 public class BoxHP : MonoBehaviour 
-{ 
+{
     public float HP = 100;
     float RainDamage = 1f;
 
@@ -87,6 +87,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "WaterTrap")
         {
+            GetComponent<AudioSource>().Play();
             HpChange(30);
         }
 
@@ -97,6 +98,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "LagerTrap")
         {
+            
             HpChange(100);
         }
 

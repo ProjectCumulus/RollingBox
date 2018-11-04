@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -543,9 +543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81475c08320ded2478fdde7578ea4f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BreakSound: {fileID: 0}
-  fallsound: {fileID: 0}
-  knifesound: {fileID: 0}
   Able_Destroy: 1
   FallSpeed: 0.3
 --- !u!212 &20746323
@@ -1989,6 +1986,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85e5540657524e48b755adf403aa585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  efxSource1: {fileID: 448780633}
+  efxSource2: {fileID: 448780632}
+  efxSource3: {fileID: 448780631}
 --- !u!4 &448780635
 Transform:
   m_ObjectHideFlags: 0
@@ -4320,9 +4320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81475c08320ded2478fdde7578ea4f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BreakSound: {fileID: 8300000, guid: 7b5d198bd130f4d408ad23fc4f3aa94b, type: 3}
-  fallsound: {fileID: 0}
-  knifesound: {fileID: 0}
   Able_Destroy: 1
   FallSpeed: 0.3
 --- !u!212 &1117513694
@@ -6130,7 +6127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4772863984279112, guid: abf18fed32e9d214e9a3a68967083c84, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1952845644790172, guid: abf18fed32e9d214e9a3a68967083c84, type: 2}
       propertyPath: m_Name
@@ -7962,7 +7959,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4707441450292498, guid: ebbbcae2b3d3f73429d3105e5c502d9a, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1300148898532110, guid: ebbbcae2b3d3f73429d3105e5c502d9a, type: 2}
       propertyPath: m_Name
