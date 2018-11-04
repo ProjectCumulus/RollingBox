@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\boxmove.cs" />
      <Compile Include="Assets\Script\Button.cs" />
      <Compile Include="Assets\Script\cameracontroll.cs" />
+     <Compile Include="Assets\Script\changeSprite.cs" />
      <Compile Include="Assets\Script\EasingFunctions.cs" />
      <Compile Include="Assets\Script\FallingTrap.cs" />
      <Compile Include="Assets\Script\FallTrigger.cs" />
