@@ -47,6 +47,7 @@ public class FallingTrap : MonoBehaviour
             rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
             if(transform.position.y<0)
             {
+                SoundManager.instance.PlaySingle3(knifesound);
                 this.gameObject.tag = "Untagged";
                 wf = false;
                 rb.velocity = new Vector2(0, 0);
@@ -56,6 +57,7 @@ public class FallingTrap : MonoBehaviour
                     StartCoroutine(Broke());
                 }
             }
+            
             yield return new WaitForFixedUpdate();
         }
     }
@@ -71,7 +73,7 @@ public class FallingTrap : MonoBehaviour
     {
         SoundManager.instance.PlaySingle1(BreakSound);
         SoundManager.instance.PlaySingle2(fallsound);
-        SoundManager.instance.PlaySingle3(knifesound);
+       
 
         if (Able_Destroy)
         {

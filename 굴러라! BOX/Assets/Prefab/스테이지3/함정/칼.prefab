@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BreakSound: {fileID: 0}
   fallsound: {fileID: 0}
-  knifesound: {fileID: 0}
+  knifesound: {fileID: 8300000, guid: 11d3e0e3158e12143af06525f12d5890, type: 3}
   Able_Destroy: 0
   FallSpeed: 0.6
 --- !u!212 &212459213025104862

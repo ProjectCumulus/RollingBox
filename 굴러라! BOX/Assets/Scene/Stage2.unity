@@ -4692,6 +4692,11 @@ Prefab:
       propertyPath: m_Name
       value: "\uCC45R(174.3)"
       objectReference: {fileID: 0}
+    - target: {fileID: 114738309378123710, guid: 5d8f2a3fb2ffce5419d562985d89a5aa,
+        type: 2}
+      propertyPath: Able_Destroy
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d8f2a3fb2ffce5419d562985d89a5aa, type: 2}
   m_IsPrefabParent: 0
