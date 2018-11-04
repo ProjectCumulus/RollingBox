@@ -66,6 +66,7 @@ public class FallingTrap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        soundManager.instance.PlaySound();
         if (Able_Destroy)
         {
             if (collision.tag == "Player")
@@ -74,7 +75,7 @@ public class FallingTrap : MonoBehaviour
                 StartCoroutine(Broke());
             }
         }
-        soundManager.instance.PlaySound();
+       
 
 
     }
