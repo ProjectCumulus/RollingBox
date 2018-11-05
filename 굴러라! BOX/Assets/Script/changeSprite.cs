@@ -14,9 +14,12 @@ public class changeSprite : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        transform.Translate(0, 1, 0);
-        gameObject.GetComponent<SpriteRenderer>().sprite = nextSprite;
+        if (coll.gameObject.tag == "Player")
+        {
+            transform.Translate(0, 1, 0);
+            gameObject.GetComponent<SpriteRenderer>().sprite = nextSprite;
+        }
     }
 }
