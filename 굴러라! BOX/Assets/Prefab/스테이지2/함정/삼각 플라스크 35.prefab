@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Able_Destroy: 1
   FallSpeed: 0.3
-  Clip: {fileID: 8300000, guid: 7b5d198bd130f4d408ad23fc4f3aa94b, type: 3}
+  Clip: {fileID: 8300000, guid: 46e8f70dadc59e146969dcb7a27691c5, type: 3}
 --- !u!114 &114926917862464558
 MonoBehaviour:
   m_ObjectHideFlags: 1
