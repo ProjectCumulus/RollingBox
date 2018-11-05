@@ -39,7 +39,10 @@ public class cameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shake > 0)
+
+        if (transform.position.x > 155.0f)
+            
+            if (shake > 0)
         {
             camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 

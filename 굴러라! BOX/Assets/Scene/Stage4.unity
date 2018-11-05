@@ -397,6 +397,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 325614578}
+  - component: {fileID: 325614580}
   - component: {fileID: 325614577}
   - component: {fileID: 325614576}
   - component: {fileID: 325614575}
@@ -565,6 +566,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &325614580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325614573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cee0dfc5e6b55438791eea60f82f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 0}
+  shake: 5
+  shakeAmount: 0.5
+  decreaseFactor: 1
 --- !u!1001 &328367965
 Prefab:
   m_ObjectHideFlags: 0
@@ -2662,7 +2678,7 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114623345100990522, guid: 3751dffeabd4d3e428cb287e1d51eb17, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 3751dffeabd4d3e428cb287e1d51eb17, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1513565411 stripped
@@ -2683,7 +2699,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513565412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d27e67fb4ed0b941b6f7473da528f85, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1514636532
