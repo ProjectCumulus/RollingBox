@@ -1727,6 +1727,16 @@ Prefab:
       propertyPath: airSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 95117294004820830, guid: eeb5488db8b68b34a956add988a87a7e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 95117294004820830, guid: eeb5488db8b68b34a956add988a87a7e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb5488db8b68b34a956add988a87a7e, type: 2}
   m_IsPrefabParent: 0
@@ -4354,6 +4364,54 @@ GameObject:
   m_PrefabParentObject: {fileID: 1365816938701928, guid: eeb5488db8b68b34a956add988a87a7e,
     type: 2}
   m_PrefabInternal: {fileID: 269014623}
+--- !u!114 &627407798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627407796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33789d0e7c546344d9895529af00419d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SPArray:
+  - {fileID: 21300000, guid: f24ac970a9884a042917c1d6b676de14, type: 3}
+  - {fileID: 21300000, guid: 85f40ef5aa1e2de4f86070003c2c9db9, type: 3}
+  - {fileID: 21300000, guid: 72113d6ee4187c843b0eb5bc26af5858, type: 3}
+  - {fileID: 21300000, guid: c11caece50cbc154b86116ab5978f815, type: 3}
+  - {fileID: 21300000, guid: 3538f04fed25cdd4280ac9dcd488384a, type: 3}
+  - {fileID: 21300000, guid: 17bcb349b8862ea488fd66123801c98d, type: 3}
+  - {fileID: 21300000, guid: d6be68e5a75da634a89dc066154d74ff, type: 3}
+  - {fileID: 21300000, guid: 465f698f09f972c45bf4b3a71b000745, type: 3}
+  - {fileID: 21300000, guid: 6665b01c938aa0948b1b67a51e433cd0, type: 3}
+  - {fileID: 21300000, guid: 198ff884909d6e549b623e251e25e1fb, type: 3}
+  - {fileID: 21300000, guid: 11cea531c41ed514a8a2cf0e80905326, type: 3}
+  - {fileID: 21300000, guid: d44af288196e9ce40b85ae643e8f7831, type: 3}
+  - {fileID: 21300000, guid: db01450702317a049a6ea138d3f1c1b6, type: 3}
+  - {fileID: 21300000, guid: 3896ab04c7a79704d99c04a6aef58077, type: 3}
+  - {fileID: 21300000, guid: 4d7e8e9ad4de02a409ddee372853ec14, type: 3}
+  - {fileID: 21300000, guid: b0118926dddfff04a88847b9d94ee124, type: 3}
+  - {fileID: 21300000, guid: 8135ffae679589f47a263e5293b4727a, type: 3}
+  - {fileID: 21300000, guid: f7a4c90ab59b56d4db19fd691bc41232, type: 3}
+  - {fileID: 21300000, guid: 6d8d4d8d580e3ec4a96c6b70256dff4e, type: 3}
+  - {fileID: 21300000, guid: 17e1d6b9d80d6e3488c2d0613971cb4f, type: 3}
+  - {fileID: 21300000, guid: c51c4ebc25ae2044b9f2fc00b7d85ec3, type: 3}
+  - {fileID: 21300000, guid: 38aae79041d4ebb41bfb83db95c164d4, type: 3}
+  - {fileID: 21300000, guid: e434022ba5d10834ea1931434f6ed102, type: 3}
+  - {fileID: 21300000, guid: c6fb9cb64de07d34297632609914e20e, type: 3}
+  - {fileID: 21300000, guid: d2a0d957242ee8d4fb9bf00ef6b32dca, type: 3}
+  - {fileID: 21300000, guid: 37301ace3a4994641b5fad6d32767a2e, type: 3}
+  - {fileID: 21300000, guid: 3bf5e62f76997a647b647648ba4da758, type: 3}
+  - {fileID: 21300000, guid: 8f5928db4ab49ab4498c056150936ab0, type: 3}
+  - {fileID: 21300000, guid: 31e283731bae04548a4f82e0aaa0b3a6, type: 3}
+  - {fileID: 21300000, guid: 687e78c2a248c53408c9955aee9d7c90, type: 3}
+  - {fileID: 21300000, guid: 05ad4067bcc1b4543a3bcc107504e32a, type: 3}
+  - {fileID: 21300000, guid: 5061a6436c61ae04e9b20fffb7fd253f, type: 3}
+  - {fileID: 21300000, guid: 3567f6bf76cde5f4a84af70d9770414d, type: 3}
+  - {fileID: 21300000, guid: 87664927550a07541ac7331d49739dcd, type: 3}
+  - {fileID: 21300000, guid: 82ab1009e3f906644b47e788c5831150, type: 3}
+  - {fileID: 21300000, guid: d7af14b88e6d8144c88f6d651366eb01, type: 3}
 --- !u!82 &627407800
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4421,7 +4479,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -6360,7 +6418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 912757053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.25897, y: 2.9104013, z: -0.31379345}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

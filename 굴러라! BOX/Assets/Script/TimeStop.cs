@@ -33,7 +33,6 @@ public class TimeStop : MonoBehaviour
                 StartCoroutine(TimeChaging());
             }
         }
-        Debug.Log(Delay);
     }
 
     IEnumerator TimeChaging()
