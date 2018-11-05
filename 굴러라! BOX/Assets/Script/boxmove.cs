@@ -75,7 +75,7 @@ public class boxmove : MonoBehaviour
     }
     */
     /*
-     * void BoxMove()
+    void BoxMove()
     {
         transform.position += new Vector3(RightLeftDistinction * MoveSpeed , 0, 0);//이동
         this.transform.Rotate(new Vector3(0, 0, RightLeftDistinction * -RotateAngle));//회전
