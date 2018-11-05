@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427439298192094}
   - component: {fileID: 212465650622466570}
+  - component: {fileID: 114080571162371986}
   m_Layer: 0
   m_Name: "\uC0C1\uC790 \uC8FC\uBBFC 4"
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114080571162371986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796518289654878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d27e67fb4ed0b941b6f7473da528f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212465650622466570
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -73,7 +85,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: f458a6ef4f75c7a4b99cf59d2774da76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
