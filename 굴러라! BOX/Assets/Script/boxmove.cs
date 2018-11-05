@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class boxmove : MonoBehaviour
 {
-    public float MoveSpeed = 0.02f;
+    //public float MoveSpeed = 0.02f;
     float RotateAngle = 1.8f;
     public float JumpPower = 16;
     int KeyInputCheck = 0;
@@ -13,7 +13,7 @@ public class boxmove : MonoBehaviour
     bool JumpAble = true;
 
     Rigidbody2D rb;
-
+    public float MoveSpeed = 0.05f;
     private void Awake()
     {
 
@@ -23,6 +23,7 @@ public class boxmove : MonoBehaviour
     private void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
+        Time.timeScale = 1f;
     }
 
 
@@ -30,10 +31,12 @@ public class boxmove : MonoBehaviour
 // Update is called once per frame
     private void Update ()
     {
-        
+        //transform.position += new Vector3(RightLeftDistinction * MoveSpeed, 0, 0);//이동
+
+        transform.position += new Vector3(Time.deltaTime * 60 *0.05f, 0, 0);
     }
 
-
+    /*
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
@@ -70,8 +73,9 @@ public class boxmove : MonoBehaviour
         }
 
     }
-
-    void BoxMove()
+    */
+    /*
+     * void BoxMove()
     {
         transform.position += new Vector3(RightLeftDistinction * MoveSpeed , 0, 0);//이동
         this.transform.Rotate(new Vector3(0, 0, RightLeftDistinction * -RotateAngle));//회전
@@ -99,4 +103,5 @@ public class boxmove : MonoBehaviour
             JumpAble = false;
         }
     }
+    */
 }
