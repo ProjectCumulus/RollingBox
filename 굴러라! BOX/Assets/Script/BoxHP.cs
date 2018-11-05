@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class BoxHP : MonoBehaviour 
 {
     public float HP = 100;
-    float RainDamage = 1f;
+    float RainDamage = 0;
 
     public GameObject Player;
     PlatformerMotor2D _Motor;
@@ -20,7 +20,7 @@ public class BoxHP : MonoBehaviour
     void Start()
     {
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
-        HpBar=GameObject.Find("Status Fill 00").GetComponent<SimpleHealthBar> ();
+        HpBar=GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
         _Motor = Player.GetComponent<PlatformerMotor2D>();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {

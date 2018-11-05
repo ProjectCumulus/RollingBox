@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class soundManager : MonoBehaviour
 {
-    AudioClip AudioClip;
     AudioSource AudioSource;
     //public static soundManager instance = null;
 
     void Awake()
     {
-        AudioClip = GetComponent<AudioClip>();
         AudioSource = GetComponent<AudioSource>();
         /*
         if (instance == null)

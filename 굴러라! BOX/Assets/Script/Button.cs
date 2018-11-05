@@ -28,38 +28,22 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene("Ranking");
     }
 
-    public void TimeStop()
+    public void Pause()
     {
         if(Time.timeScale==1)
         {
-            StartCoroutine(TheWorld(true));
+            Time.timeScale = 0;
         }
         else
         {
-            StartCoroutine(TheWorld(false));
+            Time.timeScale = 1;
         }
     }
 
-    IEnumerator TheWorld(bool stand)
+    public void ReturnMain()
     {
-        if (stand)
-        {
-            for (int i = 25; i > -1; i--)
-            {
-                yield return new WaitForSecondsRealtime(0.04f);
-                Time.timeScale = 0.04f * i;
-            }
-        }
-        else
-        {
-            for (int i = 0; i < 26; i++)
-            {
-                yield return new WaitForSecondsRealtime(0.04f);
-                Time.timeScale = 0.04f * i;
-            }
-        }
-        Debug.Log(Time.timeScale);
-
+        Debug.Log("홈");
+        SceneManager.LoadScene("MainScreen");
     }
 
 }
