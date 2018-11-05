@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212178025581709924}
   - component: {fileID: 50783824989224692}
   - component: {fileID: 60610066219620792}
+  - component: {fileID: 95236124067480044}
   m_Layer: 0
   m_Name: "\uAC00\uC2A4 (1)"
-  m_TagString: Untagged
+  m_TagString: PoisonGas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566142340010586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.5, y: 1, z: 0}
+  m_LocalPosition: {x: 65.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,6 +93,23 @@ PolygonCollider2D:
       - {x: -1.0620728, y: -0.77525425}
       - {x: 1.1400604, y: -0.8388696}
       - {x: 1.271553, y: 0.46352577}
+--- !u!95 &95236124067480044
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566142340010586}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be3c2c438e264af4dad5205ea425f795, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212178025581709924
 SpriteRenderer:
   m_ObjectHideFlags: 1

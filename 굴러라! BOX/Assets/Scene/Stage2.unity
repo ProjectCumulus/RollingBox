@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3174,35 +3174,9 @@ Prefab:
       propertyPath: m_Name
       value: "\uAC00\uC2A4 65.5"
       objectReference: {fileID: 0}
-    - target: {fileID: 1566142340010586, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
-      propertyPath: m_TagString
-      value: PoisonGas
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &889254795 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1566142340010586, guid: ec6032e5b81127d47bded22004b5039e,
-    type: 2}
-  m_PrefabInternal: {fileID: 889254794}
---- !u!95 &889254796
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889254795}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be3c2c438e264af4dad5205ea425f795, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &902248605
 Prefab:
   m_ObjectHideFlags: 0
@@ -6175,26 +6149,6 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114974574798573326, guid: eeb5488db8b68b34a956add988a87a7e,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
-        type: 2}
-      propertyPath: airSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
-        type: 2}
-      propertyPath: groundSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114229933026803174, guid: eeb5488db8b68b34a956add988a87a7e,
-        type: 2}
-      propertyPath: jumpHeight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb5488db8b68b34a956add988a87a7e, type: 2}
   m_IsPrefabParent: 0
@@ -6565,26 +6519,6 @@ Prefab:
     - target: {fileID: 1832506502450844, guid: d37c6071d6c14604fb09ee1e066ffa89, type: 2}
       propertyPath: m_Name
       value: "\uC758\uC790 41.5"
-      objectReference: {fileID: 0}
-    - target: {fileID: 61674385245987916, guid: d37c6071d6c14604fb09ee1e066ffa89,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 61674385245987916, guid: d37c6071d6c14604fb09ee1e066ffa89,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 61674385245987916, guid: d37c6071d6c14604fb09ee1e066ffa89,
-        type: 2}
-      propertyPath: m_AutoTiling
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212874122003471910, guid: d37c6071d6c14604fb09ee1e066ffa89,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37c6071d6c14604fb09ee1e066ffa89, type: 2}

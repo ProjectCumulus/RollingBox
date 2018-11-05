@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058e658302fce2d4397793776acf917c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerPositionX: -4
+  TriggerPositionX: -2
   FallingTrap: {fileID: 1001778470379134}
 --- !u!114 &114861563422217900
 MonoBehaviour:

@@ -225,8 +225,8 @@ MonoBehaviour:
     m_Bits: 512
   additionalRaycastsPerSide: 1
   groundSpeed: 3
-  timeToGroundSpeed: 0.1
-  groundStopDistance: 0.2
+  timeToGroundSpeed: 0
+  groundStopDistance: 0
   airSpeed: 3
   changeDirectionInAir: 1
   timeToAirSpeed: 0.2
@@ -236,7 +236,7 @@ MonoBehaviour:
   fastFallSpeed: 32
   fastFallGravityMultiplier: 8
   ladderSpeed: 5
-  jumpHeight: 0.75
+  jumpHeight: 1
   extraJumpHeight: 1.5
   numOfAirJumps: 0
   jumpWindowWhenFalling: 0.2

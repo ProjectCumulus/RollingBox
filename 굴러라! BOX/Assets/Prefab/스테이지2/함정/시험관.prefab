@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058e658302fce2d4397793776acf917c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerPositionX: -2
-  FallingTrap: {fileID: 0}
+  TriggerPositionX: -1
+  FallingTrap: {fileID: 1881779130693352}
 --- !u!212 &212126195150986730
 SpriteRenderer:
   m_ObjectHideFlags: 1

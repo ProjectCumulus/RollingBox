@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public static class Global
@@ -10,16 +11,21 @@ public static class Global
 
 public class TimeStop : MonoBehaviour
 {
+    Text Text;
     SimpleHealthBar TimeGauge;
     bool Delay = false;
     float GaugeMax = 100;
     float GaugeNow = 100;
     float GaugeAmount = 0;
+    float TimeAmount = 0;
+
 
 	// Use this for initialization
 	void Start ()
     {
+        Text = GetComponent<Text>();
 		TimeGauge= GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
+        StartCoroutine(Timer());
         InvokeRepeating("UpdateGauge", 0, 0.01f);
     }
 	
@@ -86,5 +92,15 @@ public class TimeStop : MonoBehaviour
             GaugeNow = 100;
         }
         TimeGauge.UpdateBar(GaugeNow, GaugeMax);
+    }
+
+    IEnumerator Timer()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            TimeAmount += 0.1f * 60 * Time.deltaTime;
+            Text.text = "Time:" + TimeAmount;
+        }
     }
 }
