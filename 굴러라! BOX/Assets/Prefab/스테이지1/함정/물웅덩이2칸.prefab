@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4484733233346562}
   - component: {fileID: 61713190241250278}
+  - component: {fileID: 114074057421142542}
   m_Layer: 0
   m_Name: "\uBB3C"
   m_TagString: WaterTrap
@@ -147,6 +148,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &114074057421142542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310653939832074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ed8a91e9603b3499e5d7384a61d26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: {fileID: 8300000, guid: ea9256646a677b5459a47b3ddea67aa8, type: 3}
 --- !u!212 &212452392128787560
 SpriteRenderer:
   m_ObjectHideFlags: 1

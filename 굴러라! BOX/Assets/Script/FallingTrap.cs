@@ -14,11 +14,13 @@ public class FallingTrap : MonoBehaviour
     bool wf = true;
     public float FallSpeed = 0.3f;
     float FallVelocity = 0;
- 
+    soundManager SM;
+    public AudioClip Clip;
     // Use this for initialization
 
     private void Awake()
     {
+        SM = GameObject.Find("SoundManager").GetComponent<soundManager>();
         rb = GetComponent<Rigidbody2D>();
         this.gameObject.tag = "Untagged";
 
@@ -45,19 +47,19 @@ public class FallingTrap : MonoBehaviour
         {
             FallVelocity -= FallSpeed * Time.deltaTime * 60 * Global.TheWorld;
             rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
-            if(transform.position.y<0)
+            if(transform.position.y<1)
             {
-                GetComponent<AudioSource>().Play();
                 this.gameObject.tag = "Untagged";
                 wf = false;
-                rb.velocity = new Vector2(0, 0);
-                transform.position = new Vector2(transform.position.x, 0.5f);
-
-                //SoundManager.instance.PlaySingle3(knifesound);
-
                 if (Able_Destroy)
                 {
                     StartCoroutine(Broke());
+                }
+                else
+                {
+                    SM.Play(Clip);
+                    rb.velocity = new Vector2(0, 0);
+                    transform.position = new Vector2(transform.position.x, 0.5f);
                 }
             }
             
@@ -67,18 +69,13 @@ public class FallingTrap : MonoBehaviour
 
     IEnumerator Broke()
     {
-        yield return new WaitForSeconds(0.1f);
-
+        SM.Play(Clip);
+        yield return new WaitForSeconds(0.05f);
         Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //SoundManager.instance.PlaySingle1(BreakSound);
-        //SoundManager.instance.PlaySingle2(fallsound);
-        GetComponent<AudioSource>().Play();
-
-
         if (Able_Destroy)
         {
             if (collision.tag == "Player")
@@ -87,9 +84,6 @@ public class FallingTrap : MonoBehaviour
                 StartCoroutine(Broke());
             }
         }
-
-
-
     }
 
 }

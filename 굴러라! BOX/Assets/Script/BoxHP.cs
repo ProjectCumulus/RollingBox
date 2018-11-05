@@ -87,7 +87,6 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "WaterTrap")
         {
-            GetComponent<AudioSource>().Play();
             HpChange(30);
         }
 
