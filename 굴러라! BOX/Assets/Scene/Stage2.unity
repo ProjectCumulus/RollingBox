@@ -634,6 +634,15 @@ Prefab:
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 183"
       objectReference: {fileID: 0}
+    - target: {fileID: 82326790877279162, guid: d711db65e45359048ac1ec20c848a419,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_IsPrefabParent: 0
@@ -996,6 +1005,15 @@ Prefab:
     - target: {fileID: 212912524366390610, guid: d711db65e45359048ac1ec20c848a419,
         type: 2}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82326790877279162, guid: d711db65e45359048ac1ec20c848a419,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3406,22 +3424,10 @@ Prefab:
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 50"
       objectReference: {fileID: 0}
-    - target: {fileID: 61865125660818468, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Enabled
+    - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212912524366390610, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212912524366390610, guid: d711db65e45359048ac1ec20c848a419,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f42bdfb233edc7a4f80a1ef5ed20c5e9,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_IsPrefabParent: 0
@@ -3803,6 +3809,15 @@ Prefab:
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 186"
       objectReference: {fileID: 0}
+    - target: {fileID: 82326790877279162, guid: d711db65e45359048ac1ec20c848a419,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}
   m_IsPrefabParent: 0
@@ -3907,6 +3922,15 @@ Prefab:
     - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
       propertyPath: m_Name
       value: "\uB808\uC774\uC800 180"
+      objectReference: {fileID: 0}
+    - target: {fileID: 82326790877279162, guid: d711db65e45359048ac1ec20c848a419,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162293253179988, guid: d711db65e45359048ac1ec20c848a419, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d711db65e45359048ac1ec20c848a419, type: 2}

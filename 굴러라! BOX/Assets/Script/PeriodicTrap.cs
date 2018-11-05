@@ -5,10 +5,11 @@ using UnityEngine;
 public class PeriodicTrap : MonoBehaviour {
 
     Animator Ani;
-
+    AudioSource AS;
 	// Use this for initialization
 	void Start ()
     {
+        AS = GetComponent<AudioSource>();
         Ani=GetComponent<Animator>();
     }
 	
@@ -17,4 +18,9 @@ public class PeriodicTrap : MonoBehaviour {
     {
         Ani.speed=Global.TheWorld;
 	}
+
+    void Play()
+    {
+        AS.Play();
+    }
 }
