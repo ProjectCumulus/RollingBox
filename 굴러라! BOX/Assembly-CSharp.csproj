@@ -54,6 +54,7 @@
      <Compile Include="Assets\Script\BoxAni.cs" />
      <Compile Include="Assets\Script\BoxHP.cs" />
      <Compile Include="Assets\Script\boxmove.cs" />
+     <Compile Include="Assets\Script\boxneighborhood.cs" />
      <Compile Include="Assets\Script\Button.cs" />
      <Compile Include="Assets\Script\cameracontroll.cs" />
      <Compile Include="Assets\Script\changeSprite.cs" />
