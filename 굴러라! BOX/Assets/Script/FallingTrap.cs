@@ -59,7 +59,7 @@ public class FallingTrap : MonoBehaviour
                 {
                     SM.Play(Clip);
                     rb.velocity = new Vector2(0, 0);
-                    transform.position = new Vector2(transform.position.x, 0.5f);
+                    transform.position = new Vector2(transform.position.x, 0.4f);
                 }
             }
             

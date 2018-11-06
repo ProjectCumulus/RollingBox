@@ -30,6 +30,7 @@ public class BoxHP : MonoBehaviour
         {
             InvokeRepeating("Rain", 0, 0.1f);
         }
+        HpBar.UpdateBar(HP, 100);
     }
 
     // Update is called once per frame 
@@ -84,6 +85,7 @@ public class BoxHP : MonoBehaviour
         {
             HpChange(-30);
         }
+       
 
         if (collision.gameObject.tag == "WaterTrap")
         {

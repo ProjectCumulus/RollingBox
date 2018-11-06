@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class boxneighborhood : MonoBehaviour
 {
-    float RotateAngle =1.8f;
-    public float MoveSpeed = 0.025f;
+    float RotateAngle =5f;
+    public float MoveSpeed = 0.0125f;
     Rigidbody2D rb;
     int BoxRotation = 1;
     int Check = 1;
@@ -21,14 +21,17 @@ public class boxneighborhood : MonoBehaviour
     void FixedUpdate()
     {
         //transform.position += new Vector3(MoveSpeed, 0, 0);
-       // this.transform.Rotate(new Vector3(0, 0, -RotateAngle));
-        
+        // this.transform.Rotate(new Vector3(0, 0, -RotateAngle));
+        /*
          if (Check == 1 && BoxRotation == 1)
          {
              rb.freezeRotation = true;
              InvokeRepeating("BoxMove", 0, 0.001f);
-         }
-         
+         }*/
+
+        transform.position += new Vector3(MoveSpeed, 0, 0);
+        this.transform.Rotate(new Vector3(0, 0, -RotateAngle));//회전
+
     }
     
      void BoxMove()
