@@ -40,7 +40,7 @@ public class cameraShake : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.x > 155.0f)
+        if (transform.position.x > 165.0f)
             
             if (shake > 0)
         {
