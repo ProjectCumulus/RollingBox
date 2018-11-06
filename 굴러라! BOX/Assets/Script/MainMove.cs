@@ -20,9 +20,9 @@ public class MainMove : MonoBehaviour
     void FixedUpdate ()
     {
         transform.position += new Vector3(Time.deltaTime * 60 * 0.075f, 0, 0);
-        if(transform.position.x>120)
+        if(transform.position.x>105)
         {
-            transform.position = new Vector2(-40,transform.position.y);
+            transform.position = new Vector2(-35,transform.position.y);
         }
 	}
 }
