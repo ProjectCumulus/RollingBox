@@ -11,7 +11,7 @@ public static class Global
 
 public class TimeStop : MonoBehaviour
 {
-    Text Text;
+    public Text Text;
     SimpleHealthBar TimeGauge;
     bool Delay = false;
     float GaugeMax = 100;
@@ -19,12 +19,24 @@ public class TimeStop : MonoBehaviour
     float GaugeAmount = 0;
     float TimeAmount = 0;
 
+    public static TimeStop Instance;
 
-	// Use this for initialization
-	void Start ()
+    private void Awake()
     {
-        Text = GetComponent<Text>();
-		TimeGauge= GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+        TimeGauge = GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
         StartCoroutine(Timer());
         InvokeRepeating("UpdateGauge", 0, 0.01f);
     }
@@ -99,7 +111,7 @@ public class TimeStop : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(0.1f);
-            TimeAmount += 0.1f * 60 * Time.deltaTime;
+            TimeAmount += 0.1f*Global.TheWorld * 60 * Time.deltaTime;
             Text.text = "Time:" + TimeAmount;
         }
     }

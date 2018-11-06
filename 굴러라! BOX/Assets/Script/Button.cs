@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-
 	// Use this for initialization
 	void Start ()
     {
@@ -42,8 +41,10 @@ public class Button : MonoBehaviour
 
     public void ReturnMain()
     {
+
         Debug.Log("홈");
         SceneManager.LoadScene("MainScreen");
+        Destroy(this.gameObject);
     }
 
 }

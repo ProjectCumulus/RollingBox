@@ -58,7 +58,6 @@ public class BoxAni : MonoBehaviour
 
     void BoxMove()
     {
-        Debug.Log(PresentSprite);
         PresentSprite += 1 * RightLeftDistinction;
 
         if (PresentSprite > 35)
