@@ -8,17 +8,22 @@ public class BoxHP : MonoBehaviour
 {
     public float HP = 100;
     float RainDamage = 0;
-
+    bool BoxLive = true;
+    public AudioClip HealSound;
+    public AudioClip DamagedSound;
+    public AudioClip DeathSound;
     public GameObject Player;
     PlatformerMotor2D _Motor;
     Restart restart;
     SimpleHealthBar HpBar;
+    soundManager SM;
     // Use this for initialization 
 
 
 
     void Start()
     {
+        SM = GameObject.Find("BoxSoundManager").GetComponent<soundManager>();
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
         HpBar=GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
         _Motor = Player.GetComponent<PlatformerMotor2D>();
@@ -45,7 +50,10 @@ public class BoxHP : MonoBehaviour
         if (HP <= 0)
         {
             HP = 0;
-            StartCoroutine(Death());
+            if (BoxLive == true)
+            {
+                StartCoroutine(Death());
+            }
         }
         if (HP >= 100)
         {
@@ -63,6 +71,7 @@ public class BoxHP : MonoBehaviour
     {
         Debug.Log("Poison");
         HpChange(2);
+        SM.Play(DamagedSound);
     }
 
     void PoisonEnd()
@@ -72,6 +81,8 @@ public class BoxHP : MonoBehaviour
 
     IEnumerator Death()
     {
+        BoxLive = false;
+        SM.Play(DeathSound);
         _Motor.frozen = true;
         yield return new WaitForSeconds(2f);
         Debug.Log("파괴됨.");
@@ -84,17 +95,20 @@ public class BoxHP : MonoBehaviour
         if (collision.gameObject.tag == "Heal")
         {
             HpChange(-30);
+            SM.Play(HealSound);
         }
        
 
         if (collision.gameObject.tag == "WaterTrap")
         {
             HpChange(30);
+            SM.Play(DamagedSound);
         }
 
         if (collision.gameObject.tag == "FallingTrap")
         {
             HpChange(30);
+            SM.Play(DamagedSound);
         }
 
         if (collision.gameObject.tag == "LagerTrap")
@@ -111,6 +125,7 @@ public class BoxHP : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             HpChange(30);
+            SM.Play(DamagedSound);
         }
 
         if (collision.gameObject.tag == "Mine")
@@ -121,6 +136,7 @@ public class BoxHP : MonoBehaviour
         if (collision.gameObject.tag == "Sword")
         {
             HpChange(50);
+            SM.Play(DamagedSound);
         }
     }
 

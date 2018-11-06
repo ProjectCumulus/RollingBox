@@ -7,7 +7,6 @@ public class BoxAni : MonoBehaviour
     public Sprite[] SPArray;
     int PresentSprite = 0;
     SpriteRenderer SR;
-    Sprite Sprite;
     bool KeyInputCheck = false;
     int RightLeftDistinction = 0;//좌우판별
     AudioSource AS;
@@ -21,7 +20,6 @@ public class BoxAni : MonoBehaviour
         SR = this.GetComponent<SpriteRenderer>();
         RB = GetComponentInParent<Rigidbody2D>();
         BoxHP= GetComponentInParent<BoxHP>();
-        Sprite = this.GetComponent<Sprite>();
         //StartCoroutine(Ani());
     }
 

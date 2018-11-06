@@ -344,6 +344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  HealSound: {fileID: 8300000, guid: 3caa08fbc791f604bb47e4a87e61a302, type: 3}
+  DamagedSound: {fileID: 8300000, guid: 047364219d24fc24f9fd77552a944e81, type: 3}
+  DeathSound: {fileID: 8300000, guid: 543e28f176c8a6841b643e3f9cd66388, type: 3}
   Player: {fileID: 1008885108257966}
 --- !u!212 &212690678196584348
 SpriteRenderer:
