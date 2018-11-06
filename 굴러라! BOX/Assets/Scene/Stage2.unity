@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3185,6 +3185,11 @@ Prefab:
       propertyPath: m_Name
       value: "\uAC00\uC2A4 65.5"
       objectReference: {fileID: 0}
+    - target: {fileID: 212178025581709924, guid: ec6032e5b81127d47bded22004b5039e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
   m_IsPrefabParent: 0
@@ -5276,6 +5281,11 @@ Prefab:
       propertyPath: m_Name
       value: "\uAC00\uC2A4 87"
       objectReference: {fileID: 0}
+    - target: {fileID: 212178025581709924, guid: ec6032e5b81127d47bded22004b5039e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
   m_IsPrefabParent: 0
@@ -5623,6 +5633,11 @@ Prefab:
     - target: {fileID: 1566142340010586, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
       propertyPath: m_Name
       value: "\uAC00\uC2A4 147"
+      objectReference: {fileID: 0}
+    - target: {fileID: 212178025581709924, guid: ec6032e5b81127d47bded22004b5039e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
@@ -5983,6 +5998,11 @@ Prefab:
     - target: {fileID: 1566142340010586, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
       propertyPath: m_Name
       value: "\uAC00\uC2A4 90.5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 212178025581709924, guid: ec6032e5b81127d47bded22004b5039e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6032e5b81127d47bded22004b5039e, type: 2}
