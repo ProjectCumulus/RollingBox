@@ -36,6 +36,8 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        GaugeNow = 100;
+        Global.TheWorld = 1;
         TimeGauge = GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
         StartCoroutine(Timer());
         InvokeRepeating("UpdateGauge", 0, 0.01f);

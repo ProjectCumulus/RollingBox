@@ -255,6 +255,7 @@
     <Compile Include="Assets\Script\PlayerController2D.cs" />
     <Compile Include="Assets\Script\Rain.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
+    <Compile Include="Assets\Script\SaveRanking.cs" />
     <Compile Include="Assets\Script\soundManager.cs" />
     <Compile Include="Assets\Script\TimeStop.cs" />
     <Compile Include="Assets\Script\TimeUIManage.cs" />
