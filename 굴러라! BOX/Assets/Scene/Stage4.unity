@@ -1632,7 +1632,7 @@ GameObject:
   - component: {fileID: 769846977}
   - component: {fileID: 769846976}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: BombSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2701,7 +2701,7 @@ GameObject:
   - component: {fileID: 1167533531}
   - component: {fileID: 1167533530}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AirplaneSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
