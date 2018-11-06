@@ -16,6 +16,7 @@ TagManager:
   - Sword
   - Spike
   - Mine
+  - box1
   layers:
   - Default
   - TransparentFX
