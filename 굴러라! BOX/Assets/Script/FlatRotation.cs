@@ -8,7 +8,7 @@ public class FlatRotation : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        InvokeRepeating("FlatRotate", 0, 1.0f);
+        InvokeRepeating("FlatRotate", 0, 1.5f);
     }
 	
 	// Update is called once per frame

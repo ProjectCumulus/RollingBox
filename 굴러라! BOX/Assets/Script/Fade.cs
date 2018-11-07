@@ -15,9 +15,14 @@ public class Fade : MonoBehaviour
         //SPR = this.GetComponent<SpriteRenderer>();      
         FadeIn();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnLevelWasLoaded(int level)
+    {
+        FadeIn();
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
 
     }
@@ -37,7 +42,7 @@ public class Fade : MonoBehaviour
 
         while (Image.color.a<1)
         {
-            Image.color+=new Color(0, 0, 0, 60 * Time.deltaTime / 255f);
+            Image.color+=new Color(0, 0, 0, 2*60 * Time.deltaTime / 255f);
             //SPR.color += new Color(0, 0, 0, 60 * Time.deltaTime/255f);
             Debug.Log(Image.color);
             yield return new WaitForFixedUpdate();
@@ -52,7 +57,7 @@ public class Fade : MonoBehaviour
         //SPR.color = new Color(0, 0, 0, 1);
         while (Image.color.a > 0)
         {
-            Image.color -= new Color(0, 0, 0, 60 * Time.deltaTime / 255f);
+            Image.color -= new Color(0, 0, 0, 2 * 60 * Time.deltaTime / 255f);
             //SPR.color -= new Color(0, 0, 0, 60*Time.deltaTime/255f);
             Debug.Log(Image.color);
             yield return new WaitForFixedUpdate();

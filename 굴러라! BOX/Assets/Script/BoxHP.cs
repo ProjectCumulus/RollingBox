@@ -37,7 +37,7 @@ public class BoxHP : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
-            InvokeRepeating("Rain", 0, 0.1f);
+            InvokeRepeating("Rain", 1, 0.1f);
         }
         HpBar.UpdateBar(HP, 100);
     }
