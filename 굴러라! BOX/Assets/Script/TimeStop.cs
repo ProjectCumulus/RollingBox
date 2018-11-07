@@ -11,7 +11,7 @@ public static class Global
 
 public class TimeStop : MonoBehaviour
 {
-    public GameObject CAR;
+    GameObject TimeEffect;
     public Text Text;
     SimpleHealthBar TimeGauge;
     bool Delay = false;
@@ -37,8 +37,9 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        CAR.SetActive(false);
-         GaugeNow = 100;
+        TimeEffect = GameObject.Find("TimeEffect");
+        TimeEffect.SetActive(false);
+        GaugeNow = 100;
         Global.TheWorld = 1;
         TimeGauge = GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
         StartCoroutine(Timer());
@@ -64,10 +65,10 @@ public class TimeStop : MonoBehaviour
             if (GaugeNow >= 100)
             {
                 Delay = true;
-                CAR.SetActive(true);
+                TimeEffect.SetActive(true);
                 while (Global.TheWorld > 0)
                 {
-                    CAR.transform.localScale += new Vector3(1, 1,0);
+                    TimeEffect.transform.localScale += new Vector3(1, 1,0);
                     yield return new WaitForSeconds(0.02f);
                     Global.TheWorld -= 0.05f;
                     GaugeAmount = -0.2f * Global.TheWorld;
@@ -84,12 +85,12 @@ public class TimeStop : MonoBehaviour
                 Delay = true;
                 while (Global.TheWorld < 1)
                 {
-                    CAR.transform.localScale -= new Vector3(1, 1, 0);
+                    TimeEffect.transform.localScale -= new Vector3(1, 1, 0);
                     yield return new WaitForSeconds(0.02f);
                     Global.TheWorld += 0.05f;
                     GaugeAmount = 0.04f* Global.TheWorld;
                 }
-                CAR.SetActive(false);
+                TimeEffect.SetActive(false);
                 Global.TheWorld = 1;
                 GaugeAmount = 0.04f;
                 Delay = false;
