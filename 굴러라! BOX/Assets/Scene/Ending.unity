@@ -2845,7 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101a79fe0ad61374b96d33cf0b1d02ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2004439884}
+  target: {fileID: 1899803473}
   Main: 1
 --- !u!81 &1277830726
 AudioListener:
@@ -4378,6 +4378,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1899803473 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1810510877347934, guid: 3a4b6be3040c99a408ff9d60aa6b7a5e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1143069418}
 --- !u!1 &1913751241
 GameObject:
   m_ObjectHideFlags: 0
