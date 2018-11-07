@@ -56,6 +56,9 @@ public class TimeStop : MonoBehaviour
             TimerOn = true; ;
         }
         TimeEffect = GameObject.Find("TimeEffect");
+        StopCoroutine(TimeChaging());
+        GaugeAmount = 0.04f;
+        Delay = false;
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
         GaugeNow = 100;
         Global.TheWorld = 1;
