@@ -15,7 +15,7 @@ public class BoxHP : MonoBehaviour
     public GameObject Player;
     PlatformerMotor2D _Motor;
     Restart restart;
-
+    public GameObject BGMPlayer;
     SimpleHealthBar HpBar;
     soundManager SM;
     // Use this for initialization 
@@ -25,12 +25,10 @@ public class BoxHP : MonoBehaviour
     void Start()
     {
         SM = GameObject.Find("BoxSoundManager").GetComponent<soundManager>();
-
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
-       
-
         HpBar =GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
         _Motor = Player.GetComponent<PlatformerMotor2D>();
+        BGMPlayer.GetComponent<AudioSource>().volume = 1;
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
             //StartCoroutine(Death());
@@ -88,7 +86,12 @@ public class BoxHP : MonoBehaviour
         BoxLive = false;
         SM.Play(DeathSound);
         _Motor.frozen = true;
-        yield return new WaitForSeconds(2f);
+        for(int i=0; i<10; i++)
+        {
+            BGMPlayer.GetComponent<AudioSource>().volume -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(0.5f);
         Debug.Log("파괴됨.");
         restart.Gameover();
     }
