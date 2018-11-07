@@ -93,7 +93,7 @@ public class TimeStop : MonoBehaviour
                 TimeEffect.GetComponent<SpriteRenderer>().enabled = true;
                 while (Global.TheWorld > 0)
                 {
-                    TimeEffect.transform.localScale += new Vector3(1f+ 3f * Global.TheWorld, 1f + 3f * Global.TheWorld, 0);
+                    TimeEffect.transform.localScale += new Vector3(0.5f+ 2.1f * Global.TheWorld, 0.5f + 2.1f * Global.TheWorld, 0);
                     Global.TheWorld -= 0.05f;
                     GaugeAmount = -0.2f * Global.TheWorld;
                     yield return new WaitForSeconds(0.02f);
@@ -110,7 +110,7 @@ public class TimeStop : MonoBehaviour
                 Delay = true;
                 while (Global.TheWorld < 1)
                 {
-                    TimeEffect.transform.localScale -= new Vector3(1f + 3f * Global.TheWorld, 1f + 3f * Global.TheWorld, 0);
+                    TimeEffect.transform.localScale -= new Vector3(0.5f + 2.1f * Global.TheWorld, 0.5f + 2.1f * Global.TheWorld, 0);
                     Global.TheWorld += 0.05f;
                     GaugeAmount = 0.04f * Global.TheWorld;
                     yield return new WaitForSeconds(0.02f);
