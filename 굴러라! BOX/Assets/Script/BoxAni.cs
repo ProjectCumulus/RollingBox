@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoxAni : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class BoxAni : MonoBehaviour
     Rigidbody2D RB;
     float PosY = 0;
     BoxHP BoxHP;
+    GameObject Player;
+    PlatformerMotor2D _Motor;
+    bool Freeze = true;
     // Use this for initialization
     void Start()
     {
@@ -20,13 +24,26 @@ public class BoxAni : MonoBehaviour
         SR = this.GetComponent<SpriteRenderer>();
         RB = GetComponentInParent<Rigidbody2D>();
         BoxHP= GetComponentInParent<BoxHP>();
+        Player = GameObject.Find("Player");
+        _Motor = Player.GetComponent<PlatformerMotor2D>();
+        if(SceneManager.GetActiveScene().name=="Tutorial")
+        {
+            _Motor.frozen = false;
+            Freeze = false;
+        }
+        else
+        {
+            _Motor.frozen = true;
+            Freeze = true;
+            StartCoroutine(StageStart());
+        }
         //StartCoroutine(Ani());
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (BoxHP.HP > 0)
+        if (BoxHP.HP > 0 && !Freeze)
         {
             if (!KeyInputCheck && PresentSprite % 9 == 0)
             {
@@ -77,6 +94,23 @@ public class BoxAni : MonoBehaviour
             CancelInvoke("BoxMove");
         }
         PosY = RB.position.y;
+    }
+
+    IEnumerator StageStart()
+    {
+        for (int i = 0; i < 63; i++)
+        {
+            Player.transform.position += new Vector3(0.2f, 0, 0);
+            PresentSprite++;
+            if (PresentSprite > 35)
+            {
+                PresentSprite = 0;
+            }
+            SR.sprite = SPArray[PresentSprite];
+            yield return new WaitForSeconds(0.04f);
+        }
+        Freeze = false;
+        _Motor.frozen = false;
     }
     /*
     IEnumerator Ani()
