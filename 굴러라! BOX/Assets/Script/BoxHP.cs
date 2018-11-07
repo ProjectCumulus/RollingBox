@@ -139,7 +139,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Sword")
         {
-            HpChange(50);
+            HpChange(40);
             SM.Play(DamagedSound);
         }
 
