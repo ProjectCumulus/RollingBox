@@ -61,6 +61,8 @@
      <Compile Include="Assets\Script\changeSprite.cs" />
      <Compile Include="Assets\Script\EasingFunctions.cs" />
      <Compile Include="Assets\Script\EndingSound.cs" />
+     <Compile Include="Assets\Script\Fadeout.cs" />
+     <Compile Include="Assets\Script\FadeoutTrigger.cs" />
      <Compile Include="Assets\Script\FallingTrap.cs" />
      <Compile Include="Assets\Script\FallTrigger.cs" />
      <Compile Include="Assets\Script\FlatRotation.cs" />
@@ -75,7 +77,9 @@
      <Compile Include="Assets\Script\PlayerController2D.cs" />
      <Compile Include="Assets\Script\Rain.cs" />
      <Compile Include="Assets\Script\Restart.cs" />
+     <Compile Include="Assets\Script\SaveRanking.cs" />
      <Compile Include="Assets\Script\soundManager.cs" />
+     <Compile Include="Assets\Script\TextUI.cs" />
      <Compile Include="Assets\Script\TimeStop.cs" />
      <Compile Include="Assets\Script\TimeUIManage.cs" />
      <Compile Include="Assets\Script\VillagersMove.cs" />
