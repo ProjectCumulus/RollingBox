@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Fade : MonoBehaviour
 {
 
-    SpriteRenderer SPR;
+    //SpriteRenderer SPR;
+    Image Image;
 
     // Use this for initialization
     void Start ()
     {
-        SPR = this.GetComponent<SpriteRenderer>();      
+        Image = this.GetComponent<Image>();
+        //SPR = this.GetComponent<SpriteRenderer>();      
         FadeIn();
     }
 	
@@ -33,22 +35,26 @@ public class Fade : MonoBehaviour
     IEnumerator AlphaInc()
     {
 
-        while (SPR.color.a<1)
+        while (Image.color.a<1)
         {
-            SPR.color += new Color(0, 0, 0, 60 * Time.deltaTime/255f);
-            Debug.Log(SPR.color);
+            Image.color+=new Color(0, 0, 0, 60 * Time.deltaTime / 255f);
+            //SPR.color += new Color(0, 0, 0, 60 * Time.deltaTime/255f);
+            Debug.Log(Image.color);
             yield return new WaitForFixedUpdate();
         }
-        SPR.color = new Color(0, 0, 0, 1);
+        Image.color = new Color(0, 0, 0, 1);
+        //SPR.color = new Color(0, 0, 0, 1);
     }
 
     IEnumerator AlphaDec()
     {
-        SPR.color = new Color(0, 0, 0, 1);
-        while (SPR.color.a > 0)
+        Image.color = new Color(0, 0, 0, 1);
+        //SPR.color = new Color(0, 0, 0, 1);
+        while (Image.color.a > 0)
         {
-            SPR.color -= new Color(0, 0, 0, 60*Time.deltaTime/255f);
-            Debug.Log(SPR.color);
+            Image.color -= new Color(0, 0, 0, 60 * Time.deltaTime / 255f);
+            //SPR.color -= new Color(0, 0, 0, 60*Time.deltaTime/255f);
+            Debug.Log(Image.color);
             yield return new WaitForFixedUpdate();
         }
 

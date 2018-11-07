@@ -32,22 +32,31 @@ public class TimeStop : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
     }
 
     // Use this for initialization
     void Start ()
     {
         TimeEffect = GameObject.Find("TimeEffect");
-        TimeEffect.SetActive(false);
+        TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
         GaugeNow = 100;
         Global.TheWorld = 1;
         TimeGauge = GameObject.Find("TimeBar").GetComponent<SimpleHealthBar>();
         StartCoroutine(Timer());
         InvokeRepeating("UpdateGauge", 0, 0.01f);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnLevelWasLoaded(int level)
+    {
+        TimeEffect = GameObject.Find("TimeEffect");
+        TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
+        GaugeNow = 100;
+        Global.TheWorld = 1;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -65,7 +74,7 @@ public class TimeStop : MonoBehaviour
             if (GaugeNow >= 100)
             {
                 Delay = true;
-                TimeEffect.SetActive(true);
+                TimeEffect.GetComponent<SpriteRenderer>().enabled = true;
                 while (Global.TheWorld > 0)
                 {
                     TimeEffect.transform.localScale += new Vector3(0.5f+ 2.1f * Global.TheWorld, 0.5f + 2.1f * Global.TheWorld, 0);
@@ -90,7 +99,7 @@ public class TimeStop : MonoBehaviour
                     GaugeAmount = 0.04f * Global.TheWorld;
                     yield return new WaitForSeconds(0.02f);
                 }
-                TimeEffect.SetActive(false);
+                TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
                 Global.TheWorld = 1;
                 GaugeAmount = 0.04f;
                 Delay = false;
