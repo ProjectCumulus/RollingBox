@@ -32,24 +32,25 @@ public class Fade : MonoBehaviour
 
     IEnumerator AlphaInc()
     {
-        SPR.color = new Color(0, 0, 0, 1);
-        while (SPR.color.a<255)
+
+        while (SPR.color.a<1)
         {
             SPR.color += new Color(0, 0, 0, 60 * Time.deltaTime/255f);
             Debug.Log(SPR.color);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForFixedUpdate();
         }
-
+        SPR.color = new Color(0, 0, 0, 1);
     }
 
     IEnumerator AlphaDec()
     {
+        SPR.color = new Color(0, 0, 0, 1);
         while (SPR.color.a > 0)
         {
             SPR.color -= new Color(0, 0, 0, 60*Time.deltaTime/255f);
             Debug.Log(SPR.color);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForFixedUpdate();
         }
-        SPR.color = new Color(0, 0, 0, 1);
+
     }
 }
