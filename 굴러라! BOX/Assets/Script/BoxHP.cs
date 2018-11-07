@@ -24,8 +24,11 @@ public class BoxHP : MonoBehaviour
     void Start()
     {
         SM = GameObject.Find("BoxSoundManager").GetComponent<soundManager>();
+
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
-        HpBar=GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
+        //restart = GameObject.Find("GoEnding").GetComponent<Restart>();
+
+        HpBar =GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
         _Motor = Player.GetComponent<PlatformerMotor2D>();
         if (SceneManager.GetActiveScene().name == "ScriptLab")
         {
