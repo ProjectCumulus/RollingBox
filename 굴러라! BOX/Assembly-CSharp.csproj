@@ -79,8 +79,6 @@
      <Compile Include="Assets\Script\Restart.cs" />
      <Compile Include="Assets\Script\SaveRanking.cs" />
      <Compile Include="Assets\Script\soundManager.cs" />
-     <Compile Include="Assets\Script\TextON.cs" />
-     <Compile Include="Assets\Script\TextTrigger.cs" />
      <Compile Include="Assets\Script\TextUI.cs" />
      <Compile Include="Assets\Script\TimeStop.cs" />
      <Compile Include="Assets\Script\VillagersMove.cs" />
