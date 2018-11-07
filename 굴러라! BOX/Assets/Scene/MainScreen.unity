@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.058823526, b: 0.058823526, a: 1}
-    m_PressedColor: {r: 1, g: 0.5955882, b: 0.5955882, a: 1}
+    m_HighlightedColor: {r: 0.9485294, g: 0.88332355, b: 0.7323205, a: 1}
+    m_PressedColor: {r: 0.77205884, g: 0.7339763, b: 0.64149004, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1636,8 +1636,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.04827571, b: 1, a: 1}
-    m_PressedColor: {r: 0.3455882, g: 0.3771804, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9490196, g: 0.88235295, b: 0.73333335, a: 1}
+    m_PressedColor: {r: 0.77254903, g: 0.73333335, b: 0.6431373, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
