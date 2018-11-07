@@ -15,7 +15,7 @@ public class BoxHP : MonoBehaviour
     public GameObject Player;
     PlatformerMotor2D _Motor;
     Restart restart;
-    //Ending ending;
+
     SimpleHealthBar HpBar;
     soundManager SM;
     // Use this for initialization 
@@ -27,7 +27,7 @@ public class BoxHP : MonoBehaviour
         SM = GameObject.Find("BoxSoundManager").GetComponent<soundManager>();
 
         restart = GameObject.Find("덤덤이").GetComponent <Restart>();
-        //ending = GameObject.Find("GoEnding").GetComponent<Ending>();
+       
 
         HpBar =GameObject.Find("HPBar").GetComponent<SimpleHealthBar> ();
         _Motor = Player.GetComponent<PlatformerMotor2D>();
