@@ -138,6 +138,12 @@ public class BoxHP : MonoBehaviour
             HpChange(50);
             SM.Play(DamagedSound);
         }
+
+        if (collision.gameObject.tag == "tutorialdam")
+        {
+            HpChange(90);
+            SM.Play(DamagedSound);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
