@@ -32,6 +32,12 @@ public class boxneighborhood : MonoBehaviour
         transform.position += new Vector3(MoveSpeed, 0, 0);
         this.transform.Rotate(new Vector3(0, 0, -RotateAngle));//회전
 
+       /* if (transform.position.x > 105)
+        {
+            transform.position = new Vector2(-35, transform.position.y);
+        }
+        */
+
     }
     
      void BoxMove()
