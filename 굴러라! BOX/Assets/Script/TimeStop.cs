@@ -19,6 +19,7 @@ public class TimeStop : MonoBehaviour
     float GaugeNow = 100;
     float GaugeAmount = 0;
     float TimeAmount = 0;
+    bool TimerOn = false;
 
     public static TimeStop Instance;
 
@@ -38,6 +39,7 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        TimerOn = false;
         TimeEffect = GameObject.Find("TimeEffect");
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
         GaugeNow = 100;
@@ -49,6 +51,10 @@ public class TimeStop : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
+        if (SceneManager.GetActiveScene().name != "Tutorial")
+        {
+            TimerOn = true; ;
+        }
         TimeEffect = GameObject.Find("TimeEffect");
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
         GaugeNow = 100;
@@ -128,7 +134,10 @@ public class TimeStop : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(0.1f);
-            TimeAmount += 0.1f*Global.TheWorld * 60 * Time.deltaTime;
+            if (TimerOn)
+            {
+                TimeAmount += 0.1f * Global.TheWorld * 60 * Time.deltaTime;
+            }
             Text.text = "Time:" + TimeAmount.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
         }
     }

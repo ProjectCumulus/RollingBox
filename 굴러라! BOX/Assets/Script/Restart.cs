@@ -30,12 +30,12 @@ public class Restart : MonoBehaviour
         {
             StageNumber = 3;
         }
-
-       /* if (SceneManager.GetActiveScene().name == "Stage4")
+        if (SceneManager.GetActiveScene().name == "Stage4")
         {
             StageNumber = 4;
         }
-        */
+
+
     }
 
     // Use this for initialization
@@ -66,7 +66,13 @@ public class Restart : MonoBehaviour
     {
         if(collision.tag=="Player")
         {
+           /* if(SceneManager.GetActiveScene().name == "Stage4")
+            {
+                SceneManager.LoadScene("Ending");
+            }
+            */
            SceneManager.LoadScene(Stage+(StageNumber+1));
         }
+
     }
 }

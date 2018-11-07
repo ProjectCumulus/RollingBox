@@ -19,6 +19,7 @@ TagManager:
   - box1
   - TextTrigger
   - tutorialdam
+  - GoEnd
   layers:
   - Default
   - TransparentFX
