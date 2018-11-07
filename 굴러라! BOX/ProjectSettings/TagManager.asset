@@ -17,6 +17,7 @@ TagManager:
   - Spike
   - Mine
   - box1
+  - TextTrigger
   layers:
   - Default
   - TransparentFX
