@@ -9,7 +9,6 @@ public class FadeTrigger : MonoBehaviour
     void Start ()
     {
         Black = GameObject.Find("Black").GetComponent<Fade>();
-
     }
 	
 	// Update is called once per frame
