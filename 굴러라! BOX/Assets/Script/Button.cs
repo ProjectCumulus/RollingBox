@@ -19,7 +19,7 @@ public class Button : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void Ranking()

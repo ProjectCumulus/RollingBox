@@ -16,6 +16,11 @@ public class Restart : MonoBehaviour
             Stage = "ScriptLab";
         }
 
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            StageNumber = 0;
+        }
+
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
             StageNumber = 1;
