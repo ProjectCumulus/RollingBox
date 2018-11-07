@@ -6,7 +6,7 @@ public class TextTrigger : MonoBehaviour {
     public GameObject Text, Text_B;
     // Use this for initialization
     void Start () {
-        Text.gameObject.SetActive(false);
+       Text.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -19,7 +19,6 @@ public class TextTrigger : MonoBehaviour {
         {
             Text.gameObject.SetActive(true);
             Text_B.gameObject.SetActive(false);
-
         }
     }
 }
