@@ -129,7 +129,7 @@ public class TimeStop : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             TimeAmount += 0.1f*Global.TheWorld * 60 * Time.deltaTime;
-            Text.text = "Time:" + TimeAmount;
+            Text.text = "Time:" + TimeAmount.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
         }
     }
 }
