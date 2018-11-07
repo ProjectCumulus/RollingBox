@@ -53,9 +53,19 @@ public class TimeStop : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Tutorial")
         {
-            TimerOn = true; ;
+            TimerOn = true;
+        }
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            TimerOn = true;
+            Destroy(GameObject.Find("Fancy Bar"));
+            Destroy(GameObject.Find("Pause"));
+            Destroy(GameObject.Find("Home"));
         }
         TimeEffect = GameObject.Find("TimeEffect");
+        StopCoroutine(TimeChaging());
+        GaugeAmount = 0.04f;
+        Delay = false;
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
         GaugeNow = 100;
         Global.TheWorld = 1;

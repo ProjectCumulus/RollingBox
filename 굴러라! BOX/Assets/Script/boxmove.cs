@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class boxmove : MonoBehaviour
 {
@@ -36,6 +37,15 @@ public class boxmove : MonoBehaviour
         //transform.position += new Vector3(RightLeftDistinction * MoveSpeed, 0, 0);//이동
 
         transform.position += new Vector3(MoveSpeed, 0, 0);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "GoEnd")
+        {
+            SceneManager.LoadScene("Ending");
+        }
+    }
+}
 
         /*
         private void FixedUpdate()
@@ -107,5 +117,3 @@ public class boxmove : MonoBehaviour
             }
         }
         */
-    }
-}
