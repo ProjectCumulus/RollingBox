@@ -37,6 +37,12 @@ public class boxmove : MonoBehaviour
         //transform.position += new Vector3(RightLeftDistinction * MoveSpeed, 0, 0);//이동
 
         transform.position += new Vector3(MoveSpeed, 0, 0);
+        /*
+        if (transform.position.x > 105)
+        {
+            transform.position = new Vector2(-28, transform.position.y);
+        }
+        */
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
