@@ -14,6 +14,7 @@ public class boxmove : MonoBehaviour
 
     Rigidbody2D rb;
     public float MoveSpeed = 0.0125f;
+    Ending ending;
     private void Awake()
     {
 
@@ -24,6 +25,7 @@ public class boxmove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Time.timeScale = 1f;
+        ending = GameObject.Find("GoEnding").GetComponent<Ending>();
     }
 
 
