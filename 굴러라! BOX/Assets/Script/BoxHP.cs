@@ -145,9 +145,14 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "tutorialdam")
         {
-            HpChange(90);
-            SM.Play(DamagedSound);
+            Invoke("Cliff", 0.8f);
         }
+    }
+
+    void Cliff()
+    {
+        HpChange(90);
+        SM.Play(DamagedSound);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
