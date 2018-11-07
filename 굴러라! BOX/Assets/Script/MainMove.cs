@@ -19,7 +19,7 @@ public class MainMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate ()
     {
-        transform.position += new Vector3(Time.deltaTime * 60 * 0.075f, 0, 0);
+        transform.position += new Vector3(Time.deltaTime * 60 * 0.1f, 0, 0);
         if(transform.position.x>105)
         {
             transform.position = new Vector2(-35,transform.position.y);
