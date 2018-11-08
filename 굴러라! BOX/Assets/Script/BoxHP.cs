@@ -68,7 +68,7 @@ public class BoxHP : MonoBehaviour
 
     public void Rain()
     {
-        RainDamage = 0.5f;
+        RainDamage = 0.3f;
         StartCoroutine(RainingToday());
     } 
 
