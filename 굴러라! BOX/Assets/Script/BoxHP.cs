@@ -68,7 +68,7 @@ public class BoxHP : MonoBehaviour
 
     public void Rain()
     {
-        RainDamage = 0.3f;
+        RainDamage = 0.4f;
         StartCoroutine(RainingToday());
     } 
 
@@ -99,12 +99,11 @@ public class BoxHP : MonoBehaviour
         BoxLive = false;
         SM.Play(DeathSound);
         _Motor.frozen = true;
-        for(int i=0; i<10; i++)
+        for(int i=0; i<30; i++)
         {
-            BGMPlayer.GetComponent<AudioSource>().volume -= 0.1f;
-            yield return new WaitForSeconds(0.1f);
+            BGMPlayer.GetComponent<AudioSource>().volume -= 0.025f;
+            yield return new WaitForSeconds(0.05f);
         }
-        yield return new WaitForSeconds(0.5f);
         Debug.Log("파괴됨.");
         restart.Gameover();
     }
@@ -183,7 +182,7 @@ public class BoxHP : MonoBehaviour
     { 
         if (collision.gameObject.tag == "Umb")
         {
-            RainDamage = 0.5f;
+            RainDamage = 0.4f;
         }
 
         if (collision.gameObject.tag == "PoisonGas")

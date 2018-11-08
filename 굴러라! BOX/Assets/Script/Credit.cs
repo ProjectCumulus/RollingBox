@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Credit : MonoBehaviour
 {
@@ -9,35 +10,159 @@ public class Credit : MonoBehaviour
 
     public Text Credit_Text;
     public Image Na;
-    public GameObject DataSave;
 
     // Use this for initialization
     void Start()
     {
-        DataSave.gameObject.SetActive(false);
-        Na.gameObject.SetActive(false);
         StartCoroutine(CreditTextPrint());
 
     }
 
+    IEnumerator AP()
+    {
+        while(Credit_Text.color.a<1)
+        {
+            Credit_Text.color += new Color(0, 0, 0, 0.1f);
+            yield return new WaitForFixedUpdate();
+        }
+        Credit_Text.color = new Color(1, 1, 1, 1);
+    }
+
+    IEnumerator AM()
+    {
+        while (Credit_Text.color.a > 0)
+        {
+            Credit_Text.color -= new Color(0, 0, 0, 0.1f);
+            yield return new WaitForFixedUpdate();
+        }
+        Credit_Text.color = new Color(1, 1, 1, 0f);
+    }
+
+    IEnumerator IAP()
+    {
+        while (Na.color.a < 1)
+        {
+            Na.color += new Color(0, 0, 0, 0.1f);
+            yield return new WaitForFixedUpdate();
+        }
+        Na.color = new Color(1, 1, 1, 1);
+    }
+
+    IEnumerator IAM()
+    {
+        while (Na.color.a > 0)
+        {
+            Na.color -= new Color(0, 0, 0, 0.1f);
+            yield return new WaitForFixedUpdate();
+        }
+        Na.color = new Color(1, 1, 1, 0f);
+    }
+
     IEnumerator CreditTextPrint()
     {
-        yield return new WaitForSeconds(2.0f);
-        Na.gameObject.SetActive(true);
-        Credit_Text.text = "\n팀명\n▶뭉게구름";
-        yield return new WaitForSeconds(3.5f);
-        Credit_Text.text = "\n조원\n▶김진혁 - 전반적인 코드 작성\n▶서유란 - 디자인\n▶위하은 - 스프라이트 배치 및 조정\n▶최예슬 - 디자인";
-        yield return new WaitForSeconds(3.5f);
-        Credit_Text.text = "\nThank For";
-        yield return new WaitForSeconds(2.0f);
-        Credit_Text.text = "\n오픈소스\n▶상자 이동 - https://github.com/cjddmut/Unity-2D-Platformer-Controller\n▶HP UI - tankandhealerstudio\n\n이미지\n▶방향키 - Icon made by Freepik from www.flaticon.com\n▶말풍선 - Created by Freepik";
-        yield return new WaitForSeconds(3.5f);
-        Credit_Text.text = "\n사운드\n ▶앱센터\nStage1, Laser, Book, Sword, Mine, Bombing, AIrplane, Move, Death, Button\n\n▶Kevin MacLeod (incompetech.com)\n Malicious(Stage4)\n▶Timbre(https://freesound.org/s/221683/)\nanother magic wand spell tinkle(Recovery)";
-        yield return new WaitForSeconds(3.5f);
-        Credit_Text.text = "\n사운드 프리소스\n▶Northen_LIghts(MainScreen)\n▶White_Hats(Stage2)\n▶Spirit of the Dead(Stage3)\n▶water throw stone1(Water)\n▶paper tear3(Damaged)";
+        Credit_Text.color = new Color(1, 1, 1, 0f);
+        Na.color = new Color(1, 1, 1, 0f);
         yield return new WaitForSeconds(3.0f);
-        DataSave.gameObject.SetActive(true);
-
+        Credit_Text.fontSize = 60;
+        StartCoroutine(IAP());
+        StartCoroutine(AP());
+        Credit_Text.text = "Credit";
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "Team 뭉게구름";
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.fontSize = 40;
+        Credit_Text.text = "시스템 개발      김진혁 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "레벨 디자인      위하은 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "그래픽 디자인   서유란, 최예슬 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "그래픽 기획      서유란, 최예슬 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "시스템 기획      김진혁 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "밸런싱           위하은 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "스토리 기획      최예슬, 위하은, 김진혁 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "스토리 스크립트  최예슬, 위하은, 서유란 ";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text ="게임 디렉팅      김진혁";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.fontSize = 60;
+        Credit_Text.text = "Thank For";
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.fontSize = 40;
+        Credit_Text.text = "Open Source\n" +
+            "캐릭터 이동 - C.J. Kimberlin - GitHub \n " +
+            "HP UI - tankandhealerstudio - Unity Asset Store";
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = " Sprite\n" +
+            "KeyIcon - Icon made by Freepik\n " +
+            "ChatBubble - Created by Freepik";
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = " Sound\n " +
+            "앱센터효과음 - gongu.copyright.or.kr/ by AppCenter\n" +
+            "Malicious - incompetech.com by Kevin MacLeod\n" +
+            "another magic wand spell tinkle - freesound.org/s/221683 by Timbre \n";
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.text = "당신은 " + Global.PresentTime.ToString("##0.0") + "시간 동안 달려 적의 폭격에서 마을을 구했습니다.";
+        yield return new WaitForSeconds(3.5f);
+        StartCoroutine(AM());
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(AP());
+        Credit_Text.fontSize = 60;
+        Credit_Text.text = "당신은 영웅입니다.";
+        yield return new WaitForSeconds(3.5f);
+        StartCoroutine(AM());
+        StartCoroutine(IAM());
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("MainScreen");
     }
 
     void Update()

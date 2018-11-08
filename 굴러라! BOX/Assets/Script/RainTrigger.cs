@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RainTrigger : MonoBehaviour {
-    public GameObject Rain, Rain_S;
+    public GameObject Rain;
     BoxHP BoxHP;
     GameObject Player;
     // Use this for initialization
@@ -12,7 +12,6 @@ public class RainTrigger : MonoBehaviour {
         Player = GameObject.Find("Player");
         BoxHP=Player.GetComponent<BoxHP>();
         Rain.gameObject.SetActive(false);
-        Rain_S.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class RainTrigger : MonoBehaviour {
         {
             BoxHP.Rain();
             Rain.gameObject.SetActive(true);
-            Rain_S.gameObject.SetActive(true);
+            this.GetComponent<AudioSource>().Play();
             //Destroy(this);
         }
     }

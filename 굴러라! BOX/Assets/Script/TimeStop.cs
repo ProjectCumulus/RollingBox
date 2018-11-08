@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public static class Global
 {
     public static float TheWorld = 1;
+    public static float PresentTime = 0;
 }
 
 public class TimeStop : MonoBehaviour
@@ -18,7 +19,6 @@ public class TimeStop : MonoBehaviour
     float GaugeMax = 100;
     float GaugeNow = 100;
     float GaugeAmount = 0;
-    float PresentTime = 0;
     bool TimerOn = false;
     float TimeIncrease = 0.1f;
 
@@ -40,6 +40,7 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        Global.PresentTime = 0;
         TimerOn = false;
         TimeEffect = GameObject.Find("TimeEffect");
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
@@ -62,6 +63,10 @@ public class TimeStop : MonoBehaviour
             Destroy(GameObject.Find("Fancy Bar"));
             Destroy(GameObject.Find("Pause"));
             Destroy(GameObject.Find("Home"));
+        }
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            Destroy(this.gameObject);
         }
         TimeEffect = GameObject.Find("TimeEffect");
         StopCoroutine(TimeChaging());
@@ -147,9 +152,9 @@ public class TimeStop : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             if (TimerOn)
             {
-                PresentTime += TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
+                Global.PresentTime += TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
             }
-            Text.text = "Time:" + PresentTime.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
+            Text.text = "Time:" + Global.PresentTime.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
         }
     }
 
@@ -159,12 +164,12 @@ public class TimeStop : MonoBehaviour
         for(float i=0.1f; i>0.2; i+=0.01f)
         {
             yield return new WaitForSeconds(i);
-            PresentTime += 0.1f * 60 * Time.deltaTime;
+            Global.PresentTime += 0.1f * 60 * Time.deltaTime;
         }
 
 
         TimeIncrease = 0;
-        Text.text = "Time:" + PresentTime.ToString("##0.0");
+        Text.text = "Time:" + Global.PresentTime.ToString("##0.0");
     }
 
     public void Ending()

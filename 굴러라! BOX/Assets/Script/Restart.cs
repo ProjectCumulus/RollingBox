@@ -9,6 +9,8 @@ public class Restart : MonoBehaviour
     int StageNumber = 0;
     Fade Fade;
     BoxAni BoxAni;
+    AudioSource AS;
+
 
     private void Awake()
     {
@@ -49,6 +51,8 @@ public class Restart : MonoBehaviour
     {
         Fade = GameObject.Find("Black").GetComponent<Fade>();
         BoxAni = GameObject.Find("Box").GetComponent<BoxAni>();
+        AS = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
+        StartCoroutine(VUP());
     }
 	
 	// Update is called once per frame
@@ -56,6 +60,28 @@ public class Restart : MonoBehaviour
     {
 		
 	}
+
+    IEnumerator VUP()
+    {
+        AS.volume = 0.25f;
+        while (AS.volume<1f)
+        {
+            AS.volume += 0.0125f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        AS.volume = 1f;
+    }
+
+    IEnumerator VDOWN()
+    {
+        AS.volume = 1f;
+        while (AS.volume > 0.25f)
+        {
+            AS.volume -= 0.0125f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        AS.volume = 0.25f;
+    }
 
     public void Gameover()
     {
@@ -66,17 +92,26 @@ public class Restart : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         Debug.Log("재시작");
-        SceneManager.LoadScene(Stage+StageNumber);
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+        else
+        {
+            SceneManager.LoadScene(Stage + StageNumber);
+        }
     }
 
     IEnumerator NextScene()
     {
+        StartCoroutine(VDOWN());
         BoxAni.FLANI();
         yield return new WaitForSeconds(1.0f);
         Fade.FadeOut();
         yield return new WaitForSeconds(4.0f);
         Debug.Log("재시작");
-        SceneManager.LoadScene(Stage + (StageNumber+1));
+        SceneManager.LoadScene(Stage + (StageNumber + 1));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

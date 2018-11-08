@@ -12,8 +12,9 @@ public class boxmove : MonoBehaviour
     // int RightLeftDistinction = 0;//좌우판별
     // int BoxRotation = 1;//박스의 회전상태를 나타냄, 1일때 정지
     // bool JumpAble = true;
-
+    AudioSource AS;
     Rigidbody2D rb;
+    int BoxR = 0;
     public float MoveSpeed = 0.0125f;
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class boxmove : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        AS = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         Time.timeScale = 1f;
     }
@@ -36,6 +38,12 @@ public class boxmove : MonoBehaviour
 
         transform.position += new Vector3(MoveSpeed, 0, 0);
         this.transform.Rotate(new Vector3(0, 0, -5));
+        BoxR++;
+        if(BoxR%14==0)
+        {
+            BoxR = 0;
+            AS.Play();
+        }
         /*
         if (transform.position.x > 105)
         {
