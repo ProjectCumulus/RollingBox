@@ -37,6 +37,8 @@ public class BoxHP : MonoBehaviour
         {
             InvokeRepeating("Rain", 1, 0.1f);
         }
+
+
         HpBar.UpdateBar(HP, 100);
     }
 
