@@ -96,7 +96,6 @@ public class BoxAni : MonoBehaviour
 
     IEnumerator StageStart()
     {
-
         while(Player.transform.position.y>0.525f)
         {
             _Motor.fallFast = true;

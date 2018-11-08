@@ -35,7 +35,7 @@ public class BoxHP : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
-            InvokeRepeating("Rain", 1, 0.1f);
+            Rain();
         }
 
 
@@ -66,10 +66,21 @@ public class BoxHP : MonoBehaviour
         HpBar.UpdateBar(HP, 100);
     }
 
-    void Rain()
+    public void Rain()
     {
-        HpChange(RainDamage*Global.TheWorld);  
+        RainDamage = 0.5f;
+        StartCoroutine(RainingToday());
     } 
+
+    IEnumerator RainingToday()
+    {
+        yield return new WaitForSeconds(1f);
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            HpChange(RainDamage * Global.TheWorld);
+        }
+    }
 
     void Poison()
     {
@@ -172,7 +183,7 @@ public class BoxHP : MonoBehaviour
     { 
         if (collision.gameObject.tag == "Umb")
         {
-            RainDamage = 0.3f;
+            RainDamage = 0.5f;
         }
 
         if (collision.gameObject.tag == "PoisonGas")
