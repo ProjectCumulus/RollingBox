@@ -96,8 +96,12 @@ public class BoxAni : MonoBehaviour
 
     IEnumerator StageStart()
     {
-        _Motor.fallFast = true;
-        yield return new WaitForSeconds(0.2f);
+
+        while(Player.transform.position.y>0.525f)
+        {
+            _Motor.fallFast = true;
+            yield return new WaitForFixedUpdate();
+        }
         _Motor.frozen = true;
         Freeze = true;
         for (int i = 0; i < 63; i++)
