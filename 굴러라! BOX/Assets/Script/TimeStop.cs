@@ -18,8 +18,9 @@ public class TimeStop : MonoBehaviour
     float GaugeMax = 100;
     float GaugeNow = 100;
     float GaugeAmount = 0;
-    float TimeAmount = 0;
+    float PresentTime = 0;
     bool TimerOn = false;
+    float TimeIncrease = 0.1f;
 
     public static TimeStop Instance;
 
@@ -146,9 +147,25 @@ public class TimeStop : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             if (TimerOn)
             {
-                TimeAmount += 0.1f * Global.TheWorld * 60 * Time.deltaTime;
+                PresentTime += TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
             }
-            Text.text = "Time:" + TimeAmount.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
+            Text.text = "Time:" + PresentTime.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
         }
+    }
+
+    IEnumerator TimerEnd()
+    {
+        while(TimeIncrease>0)
+        {
+            yield return new WaitForSeconds(0.1f);
+            TimeIncrease -= 0.03f;
+        }
+        TimeIncrease = 0;
+        Text.text = "Time:" + PresentTime.ToString("##0.0");
+    }
+
+    public void Ending()
+    {
+        StartCoroutine(TimerEnd());
     }
 }

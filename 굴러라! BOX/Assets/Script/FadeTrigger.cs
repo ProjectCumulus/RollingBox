@@ -5,10 +5,12 @@ using UnityEngine;
 public class FadeTrigger : MonoBehaviour
 {
     Fade Black;
+    TimeStop TimeStop;
     // Use this for initialization
     void Start ()
     {
         Black = GameObject.Find("Black").GetComponent<Fade>();
+        TimeStop = GameObject.Find("UI").GetComponent<TimeStop>();
     }
 	
 	// Update is called once per frame
@@ -20,6 +22,7 @@ public class FadeTrigger : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
+            TimeStop.Ending();
             Black.FadeOut();
         }
     }
