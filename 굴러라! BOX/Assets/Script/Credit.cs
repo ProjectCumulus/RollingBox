@@ -76,7 +76,7 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
-        Credit_Text.fontSize = 40;
+        Credit_Text.fontSize = 36;
         Credit_Text.text = "시스템 개발      김진혁 ";
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(AM());
@@ -87,12 +87,7 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
-        Credit_Text.text = "그래픽 디자인   서유란, 최예슬 ";
-        yield return new WaitForSeconds(1.5f);
-        StartCoroutine(AM());
-        yield return new WaitForSeconds(0.5f);
-        StartCoroutine(AP());
-        Credit_Text.text = "그래픽 기획      서유란, 최예슬 ";
+        Credit_Text.text = "그래픽 디자인 및 기획\n서유란, 최예슬 ";
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
@@ -107,12 +102,12 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
-        Credit_Text.text = "스토리 기획      최예슬, 위하은, 김진혁 ";
+        Credit_Text.text = "스토리 기획\n최예슬, 위하은, 김진혁, 서유란 ";
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
-        Credit_Text.text = "스토리 스크립트  최예슬, 위하은, 서유란 ";
+        Credit_Text.text = "스토리 스크립트\n최예슬, 위하은, 서유란 ";
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
@@ -128,7 +123,7 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
-        Credit_Text.fontSize = 40;
+        Credit_Text.fontSize = 36;
         Credit_Text.text = "Open Source\n" +
             "캐릭터 이동 - C.J. Kimberlin - GitHub \n " +
             "HP UI - tankandhealerstudio - Unity Asset Store";
@@ -143,6 +138,7 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
+        Credit_Text.fontSize = 32;
         Credit_Text.text = " Sound\n " +
             "앱센터효과음 - gongu.copyright.or.kr/ by AppCenter\n" +
             "Malicious - incompetech.com by Kevin MacLeod\n" +
@@ -151,6 +147,7 @@ public class Credit : MonoBehaviour
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
+        Credit_Text.fontSize = 36;
         Credit_Text.text = "당신은 " + Global.PresentTime.ToString("##0.0") + "시간 동안 달려 적의 폭격에서 마을을 구했습니다.";
         yield return new WaitForSeconds(3.5f);
         StartCoroutine(AM());
