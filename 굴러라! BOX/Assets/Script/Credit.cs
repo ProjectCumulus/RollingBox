@@ -8,13 +8,13 @@ public class Credit : MonoBehaviour
     //public GameObject credit1, credit2;
 
     public Text Credit_Text;
-    
-   
+    public GameObject DataSave;
+
     // Use this for initialization
     void Start()
     {
+        DataSave.gameObject.SetActive(false);
         StartCoroutine(CreditTextPrint());
-        
 
     }
 
@@ -37,6 +37,8 @@ public class Credit : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         Credit_Text.text = "\n프리소스\n▶Northen_LIghts(MainScreen)\n▶White_Hats(Stage2)\n▶Spirit of the Dead(Stage3)\n▶water throw stone1(Water)\n▶paper tear3(Damaged)";
         yield return new WaitForSeconds(5.0f);
+        DataSave.gameObject.SetActive(true);
+
     }
 
     void Update()
