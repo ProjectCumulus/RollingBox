@@ -22,21 +22,24 @@ public class boxmove : MonoBehaviour
     }
 
     // Use this for initialization
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Time.timeScale = 1f;
-        ending = GameObject.Find("GoEnding").GetComponent<Ending>();
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            ending = GameObject.Find("GoEnding").GetComponent<Ending>();
+        }
     }
 
 
 
     // Update is called once per frame
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         //transform.position += new Vector3(RightLeftDistinction * MoveSpeed, 0, 0);//이동
 
         transform.position += new Vector3(MoveSpeed, 0, 0);
+        this.transform.Rotate(new Vector3(0, 0, -5));
         /*
         if (transform.position.x > 105)
         {
