@@ -13189,7 +13189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1620687031}
-  Main: 0
+  StageFirstX: 15
+  StageLastX: 155
 --- !u!81 &1909206469
 AudioListener:
   m_ObjectHideFlags: 0
