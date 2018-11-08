@@ -72,6 +72,7 @@
      <Compile Include="Assets\Script\Globals.cs" />
      <Compile Include="Assets\Script\HealPack.cs" />
      <Compile Include="Assets\Script\HPUI.cs" />
+     <Compile Include="Assets\Script\KeyOn.cs" />
      <Compile Include="Assets\Script\KeyTrigger.cs" />
      <Compile Include="Assets\Script\MainMove.cs" />
      <Compile Include="Assets\Script\MovingPlatformMotor2D.cs" />
