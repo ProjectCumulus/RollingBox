@@ -155,11 +155,14 @@ public class TimeStop : MonoBehaviour
 
     IEnumerator TimerEnd()
     {
-        while(TimeIncrease>0)
+        TimerOn = false;
+        for(float i=0.1f; i>0.2; i+=0.01f)
         {
-            yield return new WaitForSeconds(0.1f);
-            TimeIncrease -= 0.03f;
+            yield return new WaitForSeconds(i);
+            PresentTime += 0.1f * 60 * Time.deltaTime;
         }
+
+
         TimeIncrease = 0;
         Text.text = "Time:" + PresentTime.ToString("##0.0");
     }
