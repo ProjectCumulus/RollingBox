@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyTrigger : MonoBehaviour {
-    public GameObject KeyA, KeyD;
+    public GameObject Keys;
     // Use this for initialization
     void Start()
     {
-       KeyA.gameObject.SetActive(false);
-       KeyD.gameObject.SetActive(false);
+      
     }
 
     // Update is called once per frame
@@ -20,8 +19,7 @@ public class KeyTrigger : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            KeyA.gameObject.SetActive(true);
-            KeyD.gameObject.SetActive(true);
+            Keys.gameObject.SetActive(false);
         }
     }
 }
