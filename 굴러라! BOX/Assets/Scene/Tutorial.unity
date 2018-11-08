@@ -5262,14 +5262,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5}
   m_EdgeRadius: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &1434067384 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1295743103819814, guid: eeb5488db8b68b34a956add988a87a7e,
     type: 2}
   m_PrefabInternal: {fileID: 1501523508}
->>>>>>> 54a27ba0ea0fe36b18f174a4fc182622319408de
 --- !u!1 &1457540799
 GameObject:
   m_ObjectHideFlags: 0
