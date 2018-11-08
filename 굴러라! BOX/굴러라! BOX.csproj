@@ -259,6 +259,7 @@
     <Compile Include="Assets\Script\PlatformerMotor2D.cs" />
     <Compile Include="Assets\Script\PlayerController2D.cs" />
     <Compile Include="Assets\Script\Rain.cs" />
+    <Compile Include="Assets\Script\RainTrigger.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
     <Compile Include="Assets\Script\SaveRanking.cs" />
     <Compile Include="Assets\Script\soundManager.cs" />

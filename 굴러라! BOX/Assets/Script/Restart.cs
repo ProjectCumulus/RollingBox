@@ -7,7 +7,8 @@ public class Restart : MonoBehaviour
 {
     string Stage = "Stage";
     int StageNumber = 0;
-
+    Fade Fade;
+    BoxAni BoxAni;
 
     private void Awake()
     {
@@ -46,8 +47,9 @@ public class Restart : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-		
-	}
+        Fade = GameObject.Find("Black").GetComponent<Fade>();
+        BoxAni = GameObject.Find("Box").GetComponent<BoxAni>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -67,16 +69,26 @@ public class Restart : MonoBehaviour
         SceneManager.LoadScene(Stage+StageNumber);
     }
 
+    IEnumerator NextScene()
+    {
+        BoxAni.FLANI();
+        yield return new WaitForSeconds(1.0f);
+        Fade.FadeOut();
+        yield return new WaitForSeconds(4.0f);
+        Debug.Log("재시작");
+        SceneManager.LoadScene(Stage + (StageNumber+1));
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag=="Player")
         {
-           /* if(SceneManager.GetActiveScene().name == "Stage4")
-            {
-                SceneManager.LoadScene("Ending");
-            }
-            */
-           SceneManager.LoadScene(Stage+(StageNumber+1));
+            /* if(SceneManager.GetActiveScene().name == "Stage4")
+             {
+                 SceneManager.LoadScene("Ending");
+             }
+             */
+            StartCoroutine(NextScene());
         }
 
     }

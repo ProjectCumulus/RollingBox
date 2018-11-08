@@ -33,8 +33,6 @@ public class BoxAni : MonoBehaviour
         }
         else
         {
-            _Motor.frozen = true;
-            Freeze = true;
             StartCoroutine(StageStart());
         }
         //StartCoroutine(Ani());
@@ -98,6 +96,8 @@ public class BoxAni : MonoBehaviour
 
     IEnumerator StageStart()
     {
+        _Motor.frozen = true;
+        Freeze = true;
         for (int i = 0; i < 63; i++)
         {
             Player.transform.position += new Vector3(0.2f, 0, 0);
@@ -111,6 +111,11 @@ public class BoxAni : MonoBehaviour
         }
         Freeze = false;
         _Motor.frozen = false;
+    }
+
+    public void FLANI()
+    {
+        StartCoroutine(StageStart());
     }
     /*
     IEnumerator Ani()

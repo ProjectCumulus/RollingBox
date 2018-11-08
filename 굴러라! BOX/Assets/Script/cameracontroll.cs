@@ -5,37 +5,36 @@ using UnityEngine;
 public class cameracontroll : MonoBehaviour
 {
     public GameObject target;
-    bool Mapout = false;
-    public bool Main = false;
-	// Use this for initialization
-	void Start ()
+
+    public float StageFirstX = 15;
+    public float StageLastX = 200;
+
+    // Use this for initialization
+    void Start ()
     {
 	}
-	
-	// Update is called once per frame
-	void LateUpdate ()
+
+    // Update is called once per frame
+    void LateUpdate()
     {
-        if (!Main)
+
+        if (target.transform.position.x < StageFirstX)
         {
-            if (!Mapout)
-            {
-                transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
-            }
-            else
-            {
-                transform.position = new Vector3(15, transform.position.y, transform.position.z);
-            }
-            if (this.transform.position.x < 15)
-            {
-                Mapout = true;
-                transform.position = new Vector3(15, transform.position.y, transform.position.z);
-            }
-            else
-                Mapout = false;
+
+            transform.position = new Vector3(StageFirstX, transform.position.y, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
+            if (target.transform.position.x > StageLastX)
+            {
+
+                transform.position = new Vector3(StageLastX, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
+            }
         }
+
     }
 }
