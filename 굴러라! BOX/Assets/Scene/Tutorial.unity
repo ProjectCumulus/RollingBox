@@ -6675,22 +6675,22 @@ Prefab:
     - target: {fileID: 224847199984717964, guid: ae5caee567f215d4597b83c0df13db4f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 114263333739969406, guid: ae5caee567f215d4597b83c0df13db4f,
         type: 2}
       propertyPath: m_FontData.m_BestFit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224847199984717964, guid: ae5caee567f215d4597b83c0df13db4f,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 224847199984717964, guid: ae5caee567f215d4597b83c0df13db4f,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 114731447944395244, guid: ae5caee567f215d4597b83c0df13db4f,
         type: 2}
