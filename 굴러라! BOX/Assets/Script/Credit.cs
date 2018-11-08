@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Credit : MonoBehaviour
 {
     //public GameObject credit1, credit2;
+
     public Text Credit_Text;
     
    
