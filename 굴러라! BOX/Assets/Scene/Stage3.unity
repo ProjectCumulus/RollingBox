@@ -7166,7 +7166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 652232349}
-  Main: 0
+  StageFirstX: 15
+  StageLastX: 240
 --- !u!1001 &1500707807
 Prefab:
   m_ObjectHideFlags: 0

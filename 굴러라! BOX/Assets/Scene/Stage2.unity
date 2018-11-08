@@ -5133,7 +5133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1619434322}
-  Main: 0
+  StageFirstX: 15
+  StageLastX: 225
 --- !u!4 &1427231119 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4715956088459790, guid: 03dfd23b15e4fb149b4d768078d93858,
