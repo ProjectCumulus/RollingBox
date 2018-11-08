@@ -55,8 +55,15 @@ public class boxmove : MonoBehaviour
     {
         if (collision.gameObject.tag == "GoEnd")
         {
-            SceneManager.LoadScene("Ending");
+            StartCoroutine(Credit());
         }
+    }
+
+    IEnumerator Credit()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Ending");
+
     }
 }
 
