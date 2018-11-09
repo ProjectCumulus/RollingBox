@@ -68,7 +68,7 @@ public class BoxHP : MonoBehaviour
 
     public void Rain()
     {
-        RainDamage = 0.4f;
+        RainDamage = 0.3f;
         StartCoroutine(RainingToday());
     } 
 
@@ -120,7 +120,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "WaterTrap")
         {
-            HpChange(30);
+            HpChange(25);
             SM.Play(DamagedSound);
         }
 
@@ -143,7 +143,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Spike")
         {
-            HpChange(30);
+            HpChange(20);
             SM.Play(DamagedSound);
         }
 
@@ -154,7 +154,7 @@ public class BoxHP : MonoBehaviour
 
         if (collision.gameObject.tag == "Sword")
         {
-            HpChange(40);
+            HpChange(30);
             SM.Play(DamagedSound);
         }
 
@@ -182,7 +182,7 @@ public class BoxHP : MonoBehaviour
     { 
         if (collision.gameObject.tag == "Umb")
         {
-            RainDamage = 0.4f;
+            RainDamage = 0.3f;
         }
 
         if (collision.gameObject.tag == "PoisonGas")

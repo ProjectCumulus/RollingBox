@@ -45,15 +45,13 @@ public class BoxAni : MonoBehaviour
         {
             if (!KeyInputCheck && PresentSprite % 9 == 0)
             {
-                //if (Input.GetAxis("Horizontal") > 0)
-                if (Input.GetKey(KeyCode.D))
+                if (Input.GetAxis("Horizontal") > 0)
                 {
                     KeyInputCheck = true;
                     RightLeftDistinction = 1;
                 }
 
-                //if (Input.GetAxis("Horizontal") < 0)
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetAxis("Horizontal") < 0)
                 {
                     KeyInputCheck = true;
                     RightLeftDistinction = -1;

@@ -99,31 +99,43 @@ public class Restart : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(Stage + StageNumber);
+
+                SceneManager.LoadScene(Stage + StageNumber);
         }
     }
 
     IEnumerator NextScene()
     {
         StartCoroutine(VDOWN());
-        BoxAni.FLANI();
+        if (SceneManager.GetActiveScene().name != "Stage4")
+        {
+            BoxAni.FLANI();
+        }
+
         yield return new WaitForSeconds(1.0f);
         Fade.FadeOut();
         yield return new WaitForSeconds(4.0f);
         Debug.Log("재시작");
-        SceneManager.LoadScene(Stage + (StageNumber + 1));
+        if (SceneManager.GetActiveScene().name == "Stage4")
+        {
+            SceneManager.LoadScene("Ending");
+        }
+        else
+        {
+            SceneManager.LoadScene(Stage + (StageNumber + 1));
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag=="Player")
-        {
-            /* if(SceneManager.GetActiveScene().name == "Stage4")
-             {
-                 SceneManager.LoadScene("Ending");
-             }
-             */
-            StartCoroutine(NextScene());
+private void OnTriggerEnter2D(Collider2D collision)
+{
+if(collision.tag=="Player")
+{
+/* if(SceneManager.GetActiveScene().name == "Stage4")
+ {
+     SceneManager.LoadScene("Ending");
+ }
+ */
+        StartCoroutine(NextScene());
         }
 
     }

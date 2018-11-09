@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMove : MonoBehaviour
 {
-    public float MoveSpeed=0.1f;
+    public float MoveSpeed=0.75f;
 
 	// Use this for initialization
 	void Start ()

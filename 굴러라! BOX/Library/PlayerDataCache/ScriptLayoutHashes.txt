@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/5681j/Documents/GitHub/RollingBox/굴러라! BOX/EXE파일/굴러라! BOX.exe
+C:/Users/whe01/OneDrive/바탕 화면/새 폴더/굴러라! BOX.exe
 SceneListBegin?
 Assets/Scene/MainScreen.unity
 Assets/Scene/Tutorial.unity

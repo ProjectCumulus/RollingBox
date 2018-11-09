@@ -4131,11 +4131,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 82649297496299800, guid: eeb5488db8b68b34a956add988a87a7e,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: fd56f540a62ad594abf2ebc22518f0d0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb5488db8b68b34a956add988a87a7e, type: 2}
   m_IsPrefabParent: 0
@@ -8488,19 +8483,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barImage: {fileID: 2074148434}
-  colorMode: 0
+  colorMode: 1
   barColor: {r: 0, g: 0.91724133, b: 1, a: 1}
   barGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.7205882, g: 0.7205882, b: 0.7205882, a: 1}
+    key1: {r: 0, g: 0.9176471, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
+    ctime0: 65469
     ctime1: 65535
     ctime2: 0
     ctime3: 0
@@ -8508,7 +8503,7 @@ MonoBehaviour:
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
+    atime0: 64880
     atime1: 65535
     atime2: 0
     atime3: 0
@@ -8535,7 +8530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.91724133, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.9176471, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

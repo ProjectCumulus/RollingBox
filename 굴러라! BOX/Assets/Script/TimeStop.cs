@@ -69,12 +69,13 @@ public class TimeStop : MonoBehaviour
             Destroy(this.gameObject);
         }
         TimeEffect = GameObject.Find("TimeEffect");
-        StopCoroutine(TimeChaging());
-        GaugeAmount = 0.04f;
-        Delay = false;
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
-        GaugeNow = 100;
+
+        StopCoroutine(TimeChaging());
+        Delay = false;
+        GaugeAmount = 0.04f;
         Global.TheWorld = 1;
+        GaugeNow = 100;
     }
 
     // Update is called once per frame

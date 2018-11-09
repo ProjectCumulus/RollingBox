@@ -12,7 +12,7 @@ public class FallingTrap : MonoBehaviour
     public bool Able_Destroy = true;
     Rigidbody2D rb;
     bool wf = true;
-    public float FallSpeed = 0.3f;
+    public float FallSpeed = 0.2f;
     float FallVelocity = 0;
     soundManager SM;
     public AudioClip Clip;
@@ -47,7 +47,7 @@ public class FallingTrap : MonoBehaviour
         {
             FallVelocity -= FallSpeed * Time.deltaTime * 60 * Global.TheWorld;
             rb.velocity = new Vector2(0, FallVelocity* Global.TheWorld);
-            if(transform.position.y<1)
+            if(transform.position.y<0.95)
             {
                 this.gameObject.tag = "Untagged";
                 wf = false;
@@ -59,7 +59,7 @@ public class FallingTrap : MonoBehaviour
                 {
                     SM.Play(Clip);
                     rb.velocity = new Vector2(0, 0);
-                    transform.position = new Vector2(transform.position.x, 0.4f);
+                    transform.position = new Vector2(transform.position.x, 0.35f);
                 }
             }
             
