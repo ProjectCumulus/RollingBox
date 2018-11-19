@@ -65,10 +65,12 @@
      <Compile Include="Assets\Script\EasingFunctions.cs" />
      <Compile Include="Assets\Script\EndingSound.cs" />
      <Compile Include="Assets\Script\Fade.cs" />
+     <Compile Include="Assets\Script\FadeCanvas.cs" />
      <Compile Include="Assets\Script\FadeTrigger.cs" />
      <Compile Include="Assets\Script\FallingTrap.cs" />
      <Compile Include="Assets\Script\FallTrigger.cs" />
      <Compile Include="Assets\Script\FlatRotation.cs" />
+     <Compile Include="Assets\Script\FLSound.cs" />
      <Compile Include="Assets\Script\Globals.cs" />
      <Compile Include="Assets\Script\HealPack.cs" />
      <Compile Include="Assets\Script\HPUI.cs" />
