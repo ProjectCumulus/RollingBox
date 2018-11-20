@@ -27,6 +27,11 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene("Ranking");
     }
 
+    public void Skip()
+    {
+        SceneManager.LoadScene("Stage1");
+    }
+
     public void Pause()
     {
         if(Time.timeScale==1)
