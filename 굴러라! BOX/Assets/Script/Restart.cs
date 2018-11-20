@@ -124,6 +124,8 @@ public class Restart : MonoBehaviour
         {
             SceneManager.LoadScene(Stage + (StageNumber + 1));
         }
+        GameObject Button = GameObject.Find("SkipButton");
+        Destroy(Button);
     }
 
 private void OnTriggerEnter2D(Collider2D collision)

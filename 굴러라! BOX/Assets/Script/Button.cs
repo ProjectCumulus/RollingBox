@@ -30,6 +30,8 @@ public class Button : MonoBehaviour
     public void Skip()
     {
         SceneManager.LoadScene("Stage1");
+        GameObject Key = GameObject.Find("Key");
+        Destroy(Key);
     }
 
     public void Pause()
