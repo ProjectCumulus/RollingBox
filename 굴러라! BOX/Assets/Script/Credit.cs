@@ -148,7 +148,7 @@ public class Credit : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(AP());
         Credit_Text.fontSize = 36;
-        Credit_Text.text = "당신은 " + Global.PresentTime.ToString("##0.0") + "시간 동안 달려 적의 폭격에서 마을을 구했습니다.";
+        Credit_Text.text = "당신은 " + (600-Global.PresentTime).ToString("##0.0") + "시간 동안 달려 적의 폭격에서 마을을 구했습니다.";
         yield return new WaitForSeconds(3.5f);
         StartCoroutine(AM());
         yield return new WaitForSeconds(0.5f);

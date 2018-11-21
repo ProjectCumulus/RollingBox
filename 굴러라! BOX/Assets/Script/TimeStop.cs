@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public static class Global
 {
     public static float TheWorld = 1;
-    public static float PresentTime = 0;
+    public static float PresentTime = 600;
 }
 
 public class TimeStop : MonoBehaviour
@@ -40,7 +40,7 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        Global.PresentTime = 0;
+        Global.PresentTime = 600;
         TimerOn = false;
         TimeEffect = GameObject.Find("TimeEffect");
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
@@ -153,7 +153,7 @@ public class TimeStop : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             if (TimerOn)
             {
-                Global.PresentTime += TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
+                Global.PresentTime -= TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
             }
             Text.text = "Time:" + Global.PresentTime.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
         }
@@ -165,7 +165,7 @@ public class TimeStop : MonoBehaviour
         for(float i=0.1f; i>0.2; i+=0.01f)
         {
             yield return new WaitForSeconds(i);
-            Global.PresentTime += 0.1f * 60 * Time.deltaTime;
+            Global.PresentTime -= 0.1f * 60 * Time.deltaTime;
         }
 
 
