@@ -65,6 +65,11 @@ public class BoxAni : MonoBehaviour
                 InvokeRepeating("BoxMove", 0, 0.04f);
             }
         }
+
+        if(Freeze)
+        {
+            CancelInvoke("BoxMove");
+        }
     }
 
     void BoxMove()

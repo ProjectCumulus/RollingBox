@@ -31,8 +31,6 @@ public class FallingTrap : MonoBehaviour
     {
         this.gameObject.tag = "FallingTrap";
         StartCoroutine(Fall());
-  
-
     }
 
     // Update is called once per frame
