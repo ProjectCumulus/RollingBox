@@ -64,6 +64,11 @@ public class TimeStop : MonoBehaviour
             Destroy(GameObject.Find("Pause"));
             Destroy(GameObject.Find("Home"));
         }
+        if (SceneManager.GetActiveScene().name == "Stage4-2")
+        {
+            TimerOn = false;
+            Destroy(this.gameObject);
+        }
         if (SceneManager.GetActiveScene().name == "Ending")
         {
             Destroy(this.gameObject);
@@ -155,7 +160,13 @@ public class TimeStop : MonoBehaviour
             {
                 Global.PresentTime -= TimeIncrease * Global.TheWorld * 60 * Time.deltaTime;
             }
+            if(Global.PresentTime<0)
+            {
+                Global.PresentTime = 0;
+                SceneManager.LoadScene("Stage4-2");
+            }
             Text.text = "Time:" + Global.PresentTime.ToString("##0.0");//string.Format("{0:###. 00}", TimeAmount);
+
         }
     }
 
