@@ -6,6 +6,7 @@ public class FadeTrigger : MonoBehaviour
 {
     Fade Black;
     TimeStop TimeStop;
+
     // Use this for initialization
     void Start ()
     {

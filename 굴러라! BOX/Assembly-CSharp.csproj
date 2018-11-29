@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\BadEndingFadeIn.cs" />
+     <Compile Include="Assets\Script\BadEndingFadeOut.cs" />
      <Compile Include="Assets\Script\BoxAni.cs" />
      <Compile Include="Assets\Script\BoxHP.cs" />
      <Compile Include="Assets\Script\boxmove.cs" />
