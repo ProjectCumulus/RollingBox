@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3136,10 +3136,8 @@ Transform:
   - {fileID: 1344160179}
   - {fileID: 1708062337}
   - {fileID: 1296570550}
-  - {fileID: 1253603071}
-  - {fileID: 1650901233}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &637914265
 Prefab:
@@ -5371,8 +5369,8 @@ Transform:
   m_LocalPosition: {x: 59, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 625103771}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1253603072
 MonoBehaviour:
@@ -5972,7 +5970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1702365757}
   StageFirstX: 15
-  StageLastX: 225
+  StageLastX: 180
 --- !u!81 &1412182459
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6824,8 +6822,8 @@ Transform:
   m_LocalPosition: {x: 130, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 625103771}
-  m_RootOrder: 7
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1650901234
 MonoBehaviour:
