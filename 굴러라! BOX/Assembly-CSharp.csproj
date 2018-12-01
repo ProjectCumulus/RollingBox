@@ -73,6 +73,7 @@
      <Compile Include="Assets\Script\FallTrigger.cs" />
      <Compile Include="Assets\Script\FlatRotation.cs" />
      <Compile Include="Assets\Script\FLSound.cs" />
+     <Compile Include="Assets\Script\GameOver.cs" />
      <Compile Include="Assets\Script\Globals.cs" />
      <Compile Include="Assets\Script\HealPack.cs" />
      <Compile Include="Assets\Script\HPUI.cs" />
