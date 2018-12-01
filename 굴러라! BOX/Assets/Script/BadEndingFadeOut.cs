@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class BadEndingFadeOut : MonoBehaviour
 {
     Fade Black;
@@ -17,13 +16,14 @@ public class BadEndingFadeOut : MonoBehaviour
     {
 
     }
+
+
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
             Debug.Log("Out");
             Black.FadeOut();
-            
         }
     }
 }

@@ -40,7 +40,7 @@ public class TimeStop : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        Global.PresentTime = 600;
+        Global.PresentTime = 5;
         TimerOn = false;
         TimeEffect = GameObject.Find("TimeEffect");
         TimeEffect.GetComponent<SpriteRenderer>().enabled = false;
